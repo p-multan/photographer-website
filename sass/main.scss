@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'config';
+@import 'mixins';
+@import 'utilities';
+@import 'animations';
+@import 'mainPage';
+@import 'mediaQueries';
+
+p {
+  font-family: map-get($fonts, main);
+}

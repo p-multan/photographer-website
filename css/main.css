@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  background-color: #fbf5f3;
+  color: #02040f;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(149, 149, 149, 0.6)), to(rgba(0, 0, 0, 0.8))), url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+  background: linear-gradient(to bottom, rgba(149, 149, 149, 0.6), rgba(0, 0, 0, 0.8)), url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+}
+
+.header__hamburger {
+  position: fixed;
+  top: 4.5rem;
+  right: 4rem;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.header__hamburger.js-menu-open .header__hamburger-bar {
+  background-color: transparent;
+}
+
+.header__hamburger.js-menu-open .header__hamburger-bar::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header__hamburger.js-menu-open .header__hamburger-bar::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__hamburger.js-menu-open .header__hamburger-bar::before, .header__hamburger.js-menu-open .header__hamburger-bar::after {
+  top: 0;
+}
+
+.header__hamburger-bar, .header__hamburger-bar::before, .header__hamburger-bar::after {
+  width: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header__hamburger-bar::before {
+  top: -17px;
+}
+
+.header__hamburger-bar {
+  top: calc(50% - 2.5px);
+}
+
+.header__hamburger-bar::after {
+  top: 17px;
+}
+
+.header__nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav-logo {
+  width: 70px;
+}
+
+.header__nav-logo-image {
+  height: 70px;
+}
+
+.header__nav-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: scale 0.6s, opacity 0.6s;
+  transition: scale 0.6s, opacity 0.6s;
+}
+
+.header__nav-overlay.js-menu-open {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.header__nav-menu {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fbf5f3;
+}
+
+.header__nav-menu-item {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.header__nav-menu-link {
+  font-size: 2rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.header__nav-menu-link:hover, .header__nav-menu-link.active:hover {
+  color: #ad9246;
+  font-weight: bold;
+}
+
+.header__main-text {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 80%;
+}
+
+.header__main-text-title {
+  font-size: 4rem;
+  color: #fff;
+  padding: 2rem 4rem;
+  background-color: #000;
+  margin-bottom: 2rem;
+}
+
+.header__main-text-subtitle {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: normal;
+}
+
+.header__main-text-button {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.header__main-text-button:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+p {
+  font-family: Open Sans, sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

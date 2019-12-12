@@ -1,0 +1,150 @@
+.header {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(149, 149, 149, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+
+  &__hamburger {
+    @include position(fixed, 4.5rem, 4rem);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    &.js-menu-open {
+      .header__hamburger-bar {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        &::before,
+        &::after {
+          top: 0;
+        }
+      }
+    }
+
+    &-bar,
+    &-bar::before,
+    &-bar::after {
+      width: 100%;
+      content: '';
+      @include position(absolute, 0, 0, 0, 0);
+      height: 5px;
+      background-color: #000;
+      transition: 0.2s;
+    }
+
+    &-bar::before {
+      top: -17px;
+    }
+
+    &-bar {
+      top: calc(50% - 2.5px);
+    }
+
+    &-bar::after {
+      top: 17px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+
+    &-logo {
+      width: 70px;
+
+      &-image {
+        height: 70px;
+      }
+    }
+
+    &-overlay {
+      background-color: rgba(0, 0, 0, 0.9);
+      @include position(fixed, 0, 0, 0, 0);
+      z-index: 5;
+      transform: scale(0);
+      opacity: 0;
+      transition: scale 0.6s, opacity 0.6s;
+
+      &.js-menu-open {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    &-menu {
+      @include position(relative);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $light-color;
+
+      &-item {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      &-link {
+        font-size: 2rem;
+        transition: color 0.2s;
+
+        &:hover,
+        &.active:hover {
+          color: $main-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__main-text {
+    @include position(absolute, 40%, 50%);
+    transform: translateX(50%);
+    // background-color: red;
+    width: 80%;
+
+    &-title {
+      font-size: 4rem;
+      color: #fff;
+      padding: 2rem 4rem;
+      background-color: #000;
+      margin-bottom: 2rem;
+    }
+
+    &-subtitle {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      font-weight: normal;
+    }
+
+    &-button {
+      display: inline-block;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      border: 2px solid #000;
+      text-transform: uppercase;
+      font-weight: bold;
+      transform: translateY(0px);
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
