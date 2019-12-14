@@ -61,6 +61,7 @@
   }
 
   &__nav {
+    padding: 4rem 3rem;
     width: 100%;
     display: flex;
 
@@ -115,7 +116,6 @@
   &__main-text {
     @include position(absolute, 30%, 50%);
     transform: translateX(50%);
-    // background-color: red;
     width: 65%;
 
     &-title {
@@ -130,22 +130,20 @@
       font-size: 2rem;
       margin-bottom: 3rem;
       font-weight: normal;
+      color: $main-color;
     }
 
     &-button {
-      display: inline-block;
-      font-size: 2rem;
-      padding: 1rem 2rem;
-      border: 2px solid $light-color;
-      color: $light-color;
-      text-transform: uppercase;
-      font-weight: bold;
-      transform: translateY(0px);
-      transition: transform 0.5s;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
+      @include button(
+        2rem,
+        $light-color,
+        tranparent,
+        $light-color,
+        $light-color,
+        transparent,
+        true,
+        false
+      );
     }
   }
 }
@@ -161,27 +159,29 @@
     align-items: center;
 
     &-image {
-      width: 20rem;
+      width: 50vw;
       margin-bottom: 4rem;
       border-radius: 50%;
     }
 
-    &-text {
-      width: 25rem;
-      margin-bottom: 0.8rem;
-      font-size: 1.4rem;
+    &-info {
+      width: 70vw;
+      &-text {
+        margin-bottom: 0.8rem;
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
 .offer {
+  // padding-bottom: 4rem;
   &__items {
     margin: 3rem 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    // background-color: red;
   }
 
   &__item {
@@ -189,6 +189,19 @@
     width: 80vw;
     height: 80vw;
     margin-bottom: 3rem;
+  }
+
+  &__button {
+    @include button(
+      2rem,
+      $dark-color,
+      $main-color,
+      $main-color,
+      $dark-color,
+      $light-color,
+      false,
+      60%
+    );
   }
 }
 
@@ -227,11 +240,12 @@
       font-size: 1.6rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
 
       &-icon {
         color: $main-color;
+        margin-bottom: 2rem;
       }
     }
   }
@@ -248,7 +262,7 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 3rem 2rem;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
 
       &-text {
         text-align: justify;
@@ -256,21 +270,16 @@
       }
 
       &-button {
-        margin: 0 auto;
-        padding: 1rem;
-        min-width: 150px;
-        border: 2px solid transparent;
-        background-color: $main-color;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        font-weight: bold;
-
-        &:hover {
-          background-color: $light-color;
-          border-color: $main-color;
-          color: $main-color;
-        }
+        @include button(
+          1.8rem,
+          $dark-color,
+          $main-color,
+          $main-color,
+          $main-color,
+          $light-color,
+          false,
+          100%
+        );
       }
     }
   }
@@ -325,27 +334,21 @@
   }
 
   &__button {
-    display: inline-block;
-    color: $light-color;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 2px solid $light-color;
-    font-size: 1.4rem;
-    padding: 1.5rem 2rem;
-    min-width: 60%;
-    background-color: $dark-color;
-    transition: 0.3s;
-    // margin-bottom: 1rem;
-
-    &:hover {
-      border-color: $dark-color;
-      background-color: $light-color;
-      color: $dark-color;
-    }
+    @include button(
+      2rem,
+      $light-color,
+      $dark-color,
+      $dark-color,
+      $main-color,
+      $light-color,
+      false,
+      50%
+    );
   }
 }
 
 .contact {
+  text-align: center;
   &__form {
     width: 80vw;
     margin: 0 auto;
@@ -409,25 +412,20 @@
     }
 
     &-button {
-      width: 100%;
-      padding: 1.5rem 2rem;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      background-color: $main-color;
-      border: 2px solid $dark-color;
-      cursor: pointer;
-      transition: 0.5s;
-
-      &:hover {
-        border-color: $main-color;
-        color: $main-color;
-        background-color: $light-color;
-      }
+      @include button(
+        1.8rem,
+        $dark-color,
+        $main-color,
+        $main-color,
+        $main-color,
+        $light-color,
+        null,
+        100%
+      );
     }
   }
 
-  &__items {
+  &__items-container {
     width: 80vw;
     overflow: hidden;
     margin: 3rem auto 0;

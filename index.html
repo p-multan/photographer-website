@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="header__hamburger" id="header-hamburger">
           <span class="header__hamburger-bar"></span>
         </div>
@@ -32,24 +32,28 @@
           /></a>
           <div class="header__nav-overlay" id="header-overlay">
             <ul class="header__nav-menu">
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">O mnie</a>
-              </li>
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">Portfolio</a>
-              </li>
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">Blog</a>
-              </li>
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">Oferta</a>
-              </li>
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">Fotobudka</a>
-              </li>
-              <li class="header__nav-menu-item">
-                <a href="#" class="header__nav-menu-link">Kontakt</a>
-              </li>
+              <div class="header__nav-menu-half">
+                <li class="header__nav-menu-item">
+                  <a href="#about" class="header__nav-menu-link">O mnie</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#portfolio" class="header__nav-menu-link">Portfolio</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#offer" class="header__nav-menu-link">Oferta</a>
+                </li>
+              </div>
+              <div class="header__nav-menu-half">
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Fotobudka</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Blog</a>
+                </li>
+                <li class="header__nav-menu-item header__nav-menu-item--last">
+                  <a href="#contact" class="header__nav-menu-link">Kontakt</a>
+                </li>
+              </div class="header__nav-menu-half">
             </ul>
           </div>
         </nav>
@@ -58,12 +62,14 @@
           <h2 class="header__main-text-subtitle">
             Fotografia ślubna. Sesje zdjęciowe. Fotobudka.
           </h2>
-          <a href="#" class="header__main-text-button">O mnie</a>
+          <a href="#about" class="header__main-text-button">Kim jestem ?</a>
+          <!-- <a href="#about" class="btn-slide-light">Kim jestem ?</a> -->
+          <!-- <a href="#about" class="header__main-text-button">Kim jestem ?</a> -->
         </div>
-      </div>
+      <!-- </div> -->
     </header>
 
-    <section class="about bg--medium">
+    <section class="about bg--medium" id="about">
       <div class="container">
         <h2 class="about__title section-title">O mnie</h2>
         <div class="about__content">
@@ -72,44 +78,90 @@
             alt="Zdjęcie przedstawiające właściciela strony - Szymona"
             class="about__content-image"
           />
-          <p class="about__content-text">
-            Cześć! Cieszę się, że jesteś.
-          </p>
-          <p class="about__content-text">
-            Mam na imię Szymon i jestem pasjonatem fotografii. Choć na co dzień
-            korzystam z aparatów cyfrowych, podobnie jak wielu cenionych
-            fotografów zaczynałem od fotografii tradycyjnej, która do tej pory
-            jest bliska memu sercu.
-          </p>
-          <!-- <p class="about__content-text">
-            Za co głównie uwielbiam fotografię? Za to, że zdjęcia mogą
-            opowiedzieć pewną historię, przekazać emocje, utrwalić chwile, które
-            już nie wrócą. Lubię fotografować ludzi i ich uczucia. Radość
-            sprawia mi również dzielenie się fotografiami, kontakt z odbiorcą za
-            pomocą obrazu.
-          </p>
-          <p class="about__content-text">
-            W swoich zdjęciach stawiam na naturalność i prostotę. Starannie
-            dobrany, przemyślany kadr w połączeniu z delikatną obróbką w
-            programie graficznym jest moim przepisem na dobre zdjęcie.
-          </p>
-          <p class="about__content-text">
-            Kilka suchych faktów o mnie: absolwent kursów krakowskiej Akademii
-            Fotografii, na koncie kilka indywidualnych wystaw fotograficznych,
-            członek Tarnowskiego Towarzystwa Fotograficznego.
-          </p> -->
-          <p class="about__content-text">
-            Zapraszam do zapoznania się z moim portfolio, ofertą, jak i do
-            kontaktu ze mną. Chętnie z Tobą porozmawiam.
-          </p>
-          <p class="about__content-text">
-            Do zobaczenia!
-          </p>
+          <div class="about__content-info">
+            <p class="about__content-info-text">
+              Cześć! Cieszę się, że tu jesteś.
+            </p>
+            <p class="about__content-info-text">
+              Mam na imię Szymon i jestem pasjonatem fotografii. Choć na co dzień
+              korzystam z aparatów cyfrowych, podobnie jak wielu cenionych
+              fotografów zaczynałem od fotografii tradycyjnej, która do tej pory
+              jest bliska memu sercu.
+            </p>
+            <p class="about__content-info-text hide-small-medium">
+              Za co głównie uwielbiam fotografię? Za to, że zdjęcia mogą
+              opowiedzieć pewną historię, przekazać emocje, utrwalić chwile, które
+              już nie wrócą. Lubię fotografować ludzi i ich uczucia. Radość
+              sprawia mi również dzielenie się fotografiami, kontakt z odbiorcą za
+              pomocą obrazu.
+            </p>
+            <p class="about__content-info-text hide-small-medium">
+              W swoich zdjęciach stawiam na naturalność i prostotę. Starannie
+              dobrany, przemyślany kadr w połączeniu z delikatną obróbką w
+              programie graficznym jest moim przepisem na dobre zdjęcie.
+            </p>
+            <p class="about__content-info-text hide-small-medium">
+              Kilka suchych faktów o mnie: absolwent kursów krakowskiej Akademii
+              Fotografii, na koncie kilka indywidualnych wystaw fotograficznych,
+              członek Tarnowskiego Towarzystwa Fotograficznego.
+            </p>
+            <p class="about__content-info-text">
+              Zapraszam do zapoznania się z moim portfolio, ofertą, jak i do
+              kontaktu ze mną. Chętnie z Tobą porozmawiam.
+            </p>
+            <p class="about__content-info-text">
+              Do zobaczenia!
+            </p>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <section class="offer bg--light">
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">
+          Portfolio
+        </h2>
+        <p class="text-lead text-lead--no-bottom">
+          Wybrane zdjęcia mojego autorstwa
+        </p>
+        <div class="portfolio__gallery">
+          <div class="portfolio__gallery-item">
+            <img
+              src="./images/portfolio/port1.jpg"
+              alt=""
+              class="portfolio__gallery-image"
+            />
+          </div>
+          <div class="portfolio__gallery-item">
+            <img
+              src="./images/portfolio/port2.jpg"
+              alt=""
+              class="portfolio__gallery-image"
+            />
+          </div>
+          <div class="portfolio__gallery-item">
+            <img
+              src="./images/portfolio/port3.jpg"
+              alt=""
+              class="portfolio__gallery-image"
+            />
+          </div>
+          <div class="portfolio__gallery-item">
+            <img
+              src="./images/portfolio/port4.jpg"
+              alt=""
+              class="portfolio__gallery-image"
+            />
+          </div>
+        </div>
+        <a href="#" class="portfolio__button">Zobacz</a>
+        <!-- <a href="#" class="portfolio__button">Zobacz</a> -->
+      </div>
+    </section>
+
+        <section class="offer bg--medium" id="offer">
       <div class="container">
         <h2 class="section-title">Oferta</h2>
         <p class="text-lead">
@@ -193,53 +245,11 @@
             </div>
           </div>
         </div>
+        <a href="#" class="offer__button">Szczegóły oraz cennik</a>
       </div>
     </section>
 
-    <section class="portfolio">
-      <div class="container">
-        <h2 class="section-title">
-          Portfolio
-        </h2>
-        <p class="text-lead text-lead--no-bottom">
-          Wybrane zdjęcia mojego autorstwa
-        </p>
-        <div class="portfolio__gallery">
-          <div class="portfolio__gallery-item">
-            <img
-              src="./images/portfolio/port1.jpg"
-              alt=""
-              class="portfolio__gallery-image"
-            />
-          </div>
-          <div class="portfolio__gallery-item">
-            <img
-              src="./images/portfolio/port2.jpg"
-              alt=""
-              class="portfolio__gallery-image"
-            />
-          </div>
-          <div class="portfolio__gallery-item">
-            <img
-              src="./images/portfolio/port3.jpg"
-              alt=""
-              class="portfolio__gallery-image"
-            />
-          </div>
-          <div class="portfolio__gallery-item">
-            <img
-              src="./images/portfolio/port4.jpg"
-              alt=""
-              class="portfolio__gallery-image"
-            />
-          </div>
-        </div>
-        <a href="#" class="portfolio__button">Zobacz</a>
-      </div>
-    </section>
-
-    <section class="contact">
-      <div class="container">
+    <section class="contact py-2" id="contact">
         <h2 class="section-title">
           Kontakt
         </h2>
@@ -314,44 +324,47 @@
             Wyślij
           </button>
         </form>
-        <div class="contact__items my-2">
-          <div class="contact__item">
-            <i class="fas fa-phone fa-3x contact__item-icon"></i>
-            <p class="contact__item-info">123 456 789</p>
-          </div>
-          <div class="contact__item">
-            <i class="fas fa-envelope fa-3x contact__item-icon"></i>
-            <p class="contact__item-info">randommail@random.com</p>
-          </div>
-          <div class="contact__item">
-            <div class="contact__item-socials">
-              <div class="contact__item-social">
-                <i
-                  class="fab fa-facebook-square fa-3x contact__item-social-icon contact__item-social-icon--fb"
-                ></i>
+          <div class="contact__items my-2">
+            <div class="contact__items-container">            
+              <div class="contact__item">
+                <i class="fas fa-phone fa-4x contact__item-icon"></i>
+                <p class="contact__item-info">123 456 789</p>
               </div>
-              <div class="contact__item-social">
-                <i
-                  class="fab fa-instagram fa-3x contact__item-social-icon contact__item-social-icon--ig"
-                ></i>
+              <div class="contact__item">
+                <i class="fas fa-envelope fa-4x contact__item-icon"></i>
+                <p class="contact__item-info">randommail@random.com</p>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-socials">
+                  <div class="contact__item-social">
+                    <i
+                      class="fab fa-facebook-square fa-4x contact__item-social-icon contact__item-social-icon--fb"
+                    ></i>
+                  </div>
+                  <div class="contact__item-social">
+                    <i
+                      class="fab fa-instagram fa-4x contact__item-social-icon contact__item-social-icon--ig"
+                    ></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <p class="footer__text">
-          2019 Szymon Michoń &copy;
-        </p>
-        <div class="footer__socials">
-          <i
-            class="fab fa-facebook-square footer__social footer__social--fb"
-          ></i>
-          <i class="fab fa-instagram footer__social footer__social--ig"></i>
-        </div>
+        <div class="footer__content">
+          <p class="footer__text">
+            2019 Szymon Michoń &copy;
+          </p>
+          <div class="footer__socials">
+            <i
+              class="fab fa-facebook-square footer__social footer__social--fb"
+            ></i>
+            <i class="fab fa-instagram footer__social footer__social--ig"></i>
+          </div>
+        </div>        
       </div>
     </footer>
 

@@ -6,6 +6,27 @@ $fonts: (
   sans-serif}
 );
 
+$breakpoints: (
+  small: (
+    min-width: 460px
+  ),
+  medium: (
+    min-width: 770px
+  ),
+  large: (
+    min-width: 1050px
+  ),
+  xlarge: (
+    min-width: 1200px
+  ),
+  xxlarge: (
+    min-width: 1450px
+  ),
+  giga: (
+    min-width: 2000px
+  )
+);
+
 $main-color: #ad9246;
 $light-color: #f3eeec;
 $medium-color: #dfe4ea;
