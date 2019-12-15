@@ -607,7 +607,8 @@
 }
 
 // lanscape
-@media (orientation: landscape) and (max-width: 900px) {
+@media (orientation: landscape) and (max-width: 900px),
+  (min-width: 1000px) and (max-height: 500px) {
   .text-lead {
     font-size: 1.5rem;
   }
