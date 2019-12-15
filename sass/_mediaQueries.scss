@@ -608,7 +608,7 @@
 
 // lanscape
 @media (orientation: landscape) and (max-width: 900px),
-  (min-width: 1000px) and (max-height: 500px) {
+  (orientation: landscape) and (max-height: 500px) {
   .text-lead {
     font-size: 1.5rem;
   }
@@ -650,17 +650,18 @@
   }
 
   .about {
-    height: 100vh;
+    min-height: 100vh;
     &__content {
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
 
       &-image {
         width: 30%;
       }
 
       &-info {
-        align-self: flex-start;
+        // align-self: flex-start;
         width: 50%;
 
         &-text {
@@ -671,7 +672,7 @@
   }
 
   .portfolio {
-    height: 100vh;
+    min-height: 100vh;
     &__gallery {
       grid-template-columns: repeat(4, 130px);
       grid-template-rows: initial;
@@ -685,7 +686,7 @@
   }
 
   .offer {
-    height: 100vh;
+    min-height: 100vh;
 
     &__items {
       flex-direction: row;
