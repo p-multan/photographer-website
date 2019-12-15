@@ -55,6 +55,14 @@
     }
   }
 
+  .photobooth {
+    &__content {
+      &-info {
+        font-size: 2rem;
+      }
+    }
+  }
+
   .card {
     &__front {
       &-content-text {
@@ -103,6 +111,22 @@
 
   .footer {
     font-size: 2rem;
+  }
+
+  .offers {
+    &__panel {
+      &-content {
+        &-package {
+          &-title {
+            font-size: 3rem;
+          }
+
+          &-desc {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -204,6 +228,17 @@
     margin: 3rem auto;
   }
 
+  .photobooth {
+    &__content {
+      &-title {
+        font-size: 4rem;
+      }
+      &-info {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
   .contact {
     &__form {
       width: 75vw;
@@ -249,6 +284,28 @@
 
     &__social {
       font-size: 4rem;
+    }
+  }
+
+  .offers {
+    &__tabs {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 60px);
+    }
+
+    &__panel {
+      &-content {
+        &-package {
+          padding: 4rem 5rem;
+          &-desc {
+            font-size: 2.5rem;
+          }
+
+          &-list {
+            font-size: 2.2rem;
+          }
+        }
+      }
     }
   }
 }
@@ -410,6 +467,12 @@
       display: none;
     }
 
+    &--inner {
+      .header__nav-overlay-logo {
+        top: 3%;
+      }
+    }
+
     &__nav {
       justify-content: space-between;
       padding: 0 1rem;
@@ -423,7 +486,7 @@
       }
 
       &-logo {
-        @include position(absolute, 2%, 50%, null, null);
+        @include position(absolute, 20px, 50%, null, null);
         transform: translateX(50%);
         z-index: 11;
 
@@ -467,7 +530,8 @@
           font-size: 2.1rem;
           transition: 0.5s;
 
-          &:hover {
+          &:hover,
+          &--active {
             background-color: $dark-color;
           }
         }
@@ -487,9 +551,72 @@
     }
   }
 
+  .portfolio {
+    background-attachment: fixed;
+  }
+
+  .photobooth {
+    background-attachment: fixed;
+    &__content {
+      &-title {
+        font-size: 6rem;
+      }
+      &-info {
+        font-size: 3rem;
+      }
+    }
+  }
+
   .contact {
     &__form {
       width: 90%;
+    }
+  }
+
+  .offers {
+    &__tabs {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: initial;
+    }
+
+    &__tab {
+      padding: 2rem 3rem;
+    }
+
+    &__panel {
+      &-content {
+        &-packages {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          &--single {
+            display: block;
+            background-color: $medium-color;
+            padding: 2rem;
+          }
+        }
+        &-package {
+          padding: 3rem 4rem;
+
+          &--single {
+            width: 40%;
+            margin: 0 auto;
+            border: 2px solid $light-color;
+          }
+          &-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+          }
+
+          &-desc {
+            font-size: 2rem;
+          }
+
+          &-list {
+            font-size: 1.8rem;
+          }
+        }
+      }
     }
   }
 }
@@ -497,12 +624,14 @@
 // 1450px
 @include mQ(xxlarge) {
   .header {
-    background: linear-gradient(
-        to bottom,
-        rgba(149, 149, 149, 0.6),
-        rgba(0, 0, 0, 0.8)
-      ),
-      url(../images/showcase.jpg) no-repeat center 50% / cover;
+    &--home {
+      background: linear-gradient(
+          to bottom,
+          rgba(149, 149, 149, 0.6),
+          rgba(0, 0, 0, 0.8)
+        ),
+        url(../images/showcase.jpg) no-repeat center 50% / cover;
+    }
 
     &__nav {
       &-menu {
@@ -661,7 +790,6 @@
       }
 
       &-info {
-        // align-self: flex-start;
         width: 50%;
 
         &-text {

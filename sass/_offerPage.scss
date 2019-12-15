@@ -1,0 +1,105 @@
+.offers {
+  &__tabs {
+    display: grid;
+    grid-template-rows: repeat(4, 60px);
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid $dark-color;
+    color: $dark-color;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+
+    &.js-active {
+      color: $main-color;
+      border-color: $dark-color;
+      background-color: $dark-color;
+    }
+
+    &:hover {
+      background: $dark-color;
+      color: $main-color;
+      border-color: $dark-color;
+    }
+  }
+
+  &__panel {
+    padding: 2rem 0;
+    display: none;
+    height: auto;
+
+    &.js-active {
+      display: block;
+    }
+
+    &-title {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      font-weight: bold;
+      color: $dark-color;
+    }
+
+    &-content {
+      display: flex;
+      height: 100%;
+
+      &-packages {
+        width: 100%;
+        display: grid;
+
+        &--single {
+          display: block;
+          background-color: $medium-color;
+        }
+      }
+
+      &-package {
+        width: 100%;
+        height: auto;
+        padding: 2rem 2rem 2rem 3rem;
+        background-color: $medium-color;
+        text-transform: uppercase;
+        text-align: left;
+
+        &--single {
+          width: 100%;
+        }
+
+        &--even {
+          background-color: initial;
+        }
+
+        &-title {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+
+        &-desc {
+          font-size: 1.5rem;
+        }
+
+        &-list {
+          list-style-image: url('../images/tick.png');
+          padding: 2rem;
+          list-style-type: square;
+          font-size: 1.7rem;
+          text-transform: initial;
+
+          &-item {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

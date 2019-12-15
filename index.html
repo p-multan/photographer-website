@@ -18,8 +18,7 @@
     <script src="./scripts/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <!-- <div class="container"> -->
+    <header class="header header--home">
         <div class="header__hamburger" id="header-hamburger">
           <span class="header__hamburger-bar"></span>
         </div>
@@ -45,7 +44,7 @@
               </div>
               <div class="header__nav-menu-half">
                 <li class="header__nav-menu-item">
-                  <a href="#" class="header__nav-menu-link">Fotobudka</a>
+                  <a href="#photobooth" class="header__nav-menu-link">Fotobudka</a>
                 </li>
                 <li class="header__nav-menu-item">
                   <a href="#" class="header__nav-menu-link">Blog</a>
@@ -63,18 +62,20 @@
             Fotografia ślubna. Sesje zdjęciowe. Fotobudka.
           </h2>
           <a href="#about" class="header__main-text-button">Kim jestem ?</a>
-          <!-- <a href="#about" class="btn-slide-light">Kim jestem ?</a> -->
-          <!-- <a href="#about" class="header__main-text-button">Kim jestem ?</a> -->
         </div>
-      <!-- </div> -->
     </header>
 
     <section class="about bg--medium" id="about">
       <div class="container">
         <h2 class="about__title section-title">O mnie</h2>
         <div class="about__content">
-          <img
+          <!-- <img
             src="./images/photographer.jpg"
+            alt="Zdjęcie przedstawiające właściciela strony - Szymona"
+            class="about__content-image"
+          /> -->
+          <img
+            src="./images/szymon.jpg"
             alt="Zdjęcie przedstawiające właściciela strony - Szymona"
             class="about__content-image"
           />
@@ -161,7 +162,7 @@
       </div>
     </section>
 
-        <section class="offer bg--medium" id="offer">
+    <section class="offer bg--medium" id="offer">
       <div class="container">
         <h2 class="section-title">Oferta</h2>
         <p class="text-lead">
@@ -185,9 +186,9 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Optio, sint. Fugit eligendi itaque vero maiores!
                   </p>
-                  <a href="./supply.html" class="btn card__back-content-button"
+                  <!-- <a href="./supply.html" class="btn card__back-content-button"
                     >Więcej</a
-                  >
+                  > -->
                 </div>
               </div>
             </div>
@@ -210,9 +211,9 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Optio, sint. Fugit eligendi itaque vero maiores!
                   </p>
-                  <a href="./supply.html" class="btn card__back-content-button"
+                  <!-- <a href="./supply.html" class="btn card__back-content-button"
                     >Więcej</a
-                  >
+                  > -->
                 </div>
               </div>
             </div>
@@ -237,16 +238,31 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Optio, sint. Fugit eligendi itaque vero maiores!
                   </p>
-                  <a href="./supply.html" class="btn card__back-content-button"
+                  <!-- <a href="./supply.html" class="btn card__back-content-button"
                     >Więcej</a
-                  >
+                  > -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a href="#" class="offer__button">Szczegóły oraz cennik</a>
+        <a href="./offer.html" class="offer__button">Szczegóły oraz cennik</a>
       </div>
+    </section>
+
+    <section class="photobooth" id="photobooth">
+      <div class="container">
+        <h2 class="section-title">Fotobudka</h2>
+        <p class="text-lead">Organizujesz imprezę, urodziny, studniówkę, wesele, wieczór panieński lub kawalerski?</p>
+        <div class="photobooth__content">
+          <h3 class="photobooth__content-title">Chętnie Ci w tym pomożemy</h3>
+          <p class="photobooth__content-info">
+            Podaruj swoim gościom atrakcję, dzięki której choć na chwilę będą mogli wrócić do lat, kiedy bezkarne były przebieranki i beztroskie swawole. Jeśli szukasz niecodziennego pomysłu, którym wszystkich zaskoczysz, a jednocześnie zafundujesz moc wrażeń, nie ma lepszej opcji niż nasza fotobudka
+          </p>
+          <a href="./offer.html" class="photobooth__content-button">Więcej informacji</a>
+        </div>
+      </div>
+
     </section>
 
     <section class="contact py-2" id="contact">
@@ -320,7 +336,7 @@
               ></textarea>
             </div>
           </div>
-          <button type="submit" class="contact__form-button btn btn--main">
+          <button type="submit" class="contact__form-button">
             Wyślij
           </button>
         </form>

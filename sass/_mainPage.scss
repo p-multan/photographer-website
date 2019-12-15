@@ -1,14 +1,37 @@
 .header {
-  text-align: center;
-  position: relative;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-      to bottom,
-      rgba(149, 149, 149, 0.6),
-      rgba(0, 0, 0, 0.8)
-    ),
-    url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+  position: relative;
+  text-align: center;
+
+  &--home {
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(149, 149, 149, 0.6),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+  }
+
+  &--inner {
+    position: relative;
+    height: 16vh;
+    background: none;
+  }
+  // text-align: center;
+  // position: relative;
+  // width: 100%;
+  // height: 100vh;
+  // background: linear-gradient(
+  //     to bottom,
+  //     rgba(149, 149, 149, 0.6),
+  //     rgba(0, 0, 0, 0.8)
+  //   ),
+  //   url(../images/showcase.jpg) no-repeat 60% bottom/cover;
+
+  // &--inner {
+  //   height: 20vh;
+  // }
 
   &__hamburger {
     @include position(fixed, 4.5rem, 4rem);
@@ -105,7 +128,7 @@
         transition: color 0.2s;
 
         &:hover,
-        &.active:hover {
+        &--active {
           color: $main-color;
           font-weight: bold;
         }
@@ -148,6 +171,9 @@
   }
 }
 
+.offero {
+  min-height: 200vh;
+}
 .about {
   &__title {
     margin-bottom: 2rem;
@@ -161,7 +187,7 @@
     &-image {
       width: 50vw;
       margin-bottom: 4rem;
-      border-radius: 50%;
+      // border-radius: 50%;
     }
 
     &-info {
@@ -199,7 +225,7 @@
       $main-color,
       $dark-color,
       $light-color,
-      false,
+      true,
       60%
     );
   }
@@ -344,6 +370,48 @@
       false,
       50%
     );
+  }
+}
+
+.photobooth {
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(0, 0, 0, 0.65) 50%,
+      rgba(0, 0, 0, 0.95) 100%
+    ),
+    url(../images/photobooth.jpg) no-repeat center center/cover;
+
+  &__content {
+    &-title {
+      text-transform: uppercase;
+      margin-top: 10rem;
+      padding: 3rem 4rem;
+      font-size: 3rem;
+      color: $light-color;
+      background-color: #e70012;
+    }
+
+    &-info {
+      width: 75%;
+      margin: 5rem auto 5rem;
+      color: $light-color;
+      font-size: 1.8rem;
+    }
+
+    &-button {
+      @include button(
+        2rem,
+        $light-color,
+        transparent,
+        #e70012,
+        $light-color,
+        #e70012,
+        false,
+        50%
+      );
+    }
   }
 }
 

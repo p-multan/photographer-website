@@ -1,0 +1,109 @@
+.offers {
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    height: 6rem;
+    margin: 3rem 0;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid $dark-color;
+    color: $dark-color;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+
+    &.js-active {
+      color: $main-color;
+      border-color: $dark-color;
+      background-color: $dark-color;
+    }
+
+    &:hover {
+      background: $dark-color;
+      color: $main-color;
+      border-color: $dark-color;
+    }
+  }
+
+  &__panel {
+    padding: 2rem 0;
+    display: none;
+    height: auto;
+
+    &.js-active {
+      display: block;
+    }
+
+    &-title {
+      margin-bottom: 2rem;
+      font-size: 4rem;
+      font-weight: bold;
+      color: $dark-color;
+    }
+
+    &-content {
+      display: flex;
+      height: 100%;
+
+      &-packages {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &--single {
+          display: block;
+          background-color: $medium-color;
+          padding: 2rem;
+        }
+      }
+
+      &-package {
+        width: 100%;
+        padding: 3rem 4rem;
+        background-color: $medium-color;
+        text-transform: uppercase;
+        text-align: left;
+
+        &--single {
+          width: 34%;
+          margin: 0 auto;
+          border: 2px solid $light-color;
+        }
+
+        &--even {
+          background-color: initial;
+        }
+
+        &-title {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        &-desc {
+          font-size: 1.5rem;
+        }
+
+        &-list {
+          list-style-image: url('../images/tick.png');
+          padding: 2rem;
+          list-style-type: square;
+          font-size: 1.8rem;
+          text-transform: initial;
+
+          &-item {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
