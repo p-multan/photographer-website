@@ -178,6 +178,10 @@ a {
   margin: 2rem 0 1rem;
 }
 
+.hide-small-medium {
+  display: none;
+}
+
 .header {
   text-align: center;
   position: relative;
@@ -340,7 +344,7 @@ a {
   font-size: 2rem;
   padding: 1rem 2rem;
   color: #f3eeec;
-  background-color: tranparent;
+  background-color: transparent;
   border: 2px solid #f3eeec;
   text-transform: uppercase;
   font-weight: bold;
@@ -376,6 +380,13 @@ a {
   .header__main-text-button {
     font-size: 3rem;
     padding: 1.5rem 3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+  .header__main-text-button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
   }
 }
 
@@ -474,6 +485,13 @@ a {
   .offer__button {
     font-size: 3rem;
     padding: 1.5rem 3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+  .offer__button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
   }
 }
 
@@ -608,6 +626,13 @@ a {
   }
 }
 
+@media (orientation: landscape) and (max-width: 850px) {
+  .card__back-content-button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
 .portfolio {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.7))), url(../images/portfolio_bg.jpg) no-repeat center center/cover;
@@ -703,6 +728,13 @@ a {
   .portfolio__button {
     font-size: 3rem;
     padding: 1.5rem 3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+  .portfolio__button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
   }
 }
 
@@ -831,6 +863,13 @@ a {
   .contact__form-button {
     font-size: 2.8rem;
     padding: 1.5rem 3rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+  .contact__form-button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
   }
 }
 
@@ -979,9 +1018,6 @@ a {
   .header__main-text-subtitle {
     font-size: 2.5rem;
   }
-  .header__main-text-button {
-    font-size: 2.5rem;
-  }
   .about__content-image {
     width: 50vw;
     margin-top: 2rem;
@@ -1001,9 +1037,6 @@ a {
     font-size: 2.5rem;
   }
   .card__back-content-text {
-    font-size: 1.8rem;
-  }
-  .card__back-content-button {
     font-size: 1.8rem;
   }
   .portfolio__gallery {
@@ -1443,6 +1476,204 @@ a {
   .offer__item {
     width: 15vw;
     height: 15vw;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+  .text-lead {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .container {
+    padding: 1.5rem 2rem;
+  }
+  .header__hamburger {
+    top: 3rem;
+  }
+  .header__nav {
+    padding: 2rem 3rem;
+  }
+  .header__nav-menu-link {
+    font-size: 2rem;
+  }
+  .header__main-text {
+    top: 25%;
+    width: 50%;
+  }
+  .header__main-text-title {
+    font-size: 2.5rem;
+  }
+  .header__main-text-subtitle {
+    font-size: 1.8rem;
+  }
+  .about {
+    height: 100vh;
+  }
+  .about__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about__content-image {
+    width: 30%;
+  }
+  .about__content-info {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 50%;
+  }
+  .about__content-info-text {
+    font-size: 1.4rem;
+  }
+  .portfolio {
+    height: 100vh;
+  }
+  .portfolio__gallery {
+    -ms-grid-columns: (130px)[4];
+        grid-template-columns: repeat(4, 130px);
+    -ms-grid-rows: initial;
+        grid-template-rows: initial;
+    margin: 2rem auto;
+    height: 150px;
+  }
+  .portfolio__gallery-item {
+    height: 130px;
+  }
+  .offer {
+    height: 100vh;
+  }
+  .offer__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 24vw;
+    margin: 0;
+    padding: 0;
+  }
+  .offer__item {
+    width: 20vw;
+    height: 20vw;
+  }
+  .card__front-content {
+    font-size: 0.8rem;
+  }
+  .card__front-content-text {
+    font-size: 1.3rem;
+  }
+  .card__back-content {
+    padding: 1rem;
+  }
+  .card__back-content-text {
+    font-size: 1rem;
+    min-height: initial;
+  }
+  .contact__form-fields {
+        grid-template-areas: 'name email' 'phone subject' 'message message';
+  }
+  .contact__form-field-input {
+    font-size: 1.3rem;
+    padding: 1.6rem 1rem 0.8rem;
+  }
+  .contact__form-field-label {
+    font-size: 1.1rem;
+    top: 1.7rem;
+    left: 1.1rem;
+  }
+  .contact__form-field-label.js-focus {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  .contact__items {
+    width: 100%;
+    background-color: #02040f;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact__items-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0;
+  }
+  .contact__item {
+    border: 1px solid #28313c;
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .contact__item-info {
+    font-size: 1.5rem;
+  }
+  .contact__item-socials {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 2rem;
+  }
+  .footer__socials {
+    margin: 0;
+  }
+  .footer__social {
+    font-size: 2.5rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 600px) {
+  .section-title {
+    margin: 1rem 0;
+  }
+  .about__content-info-text {
+    font-size: 1.2rem;
+  }
+  .portfolio__gallery {
+    height: 135px;
+    margin: 1rem auto;
+  }
+  .offer {
+    height: 100vh;
+  }
+  .offer__item {
+    width: 24vw;
+    height: 24vw;
   }
 }
 

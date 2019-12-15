@@ -29,10 +29,6 @@
       &-subtitle {
         font-size: 2.5rem;
       }
-
-      &-button {
-        font-size: 2.5rem;
-      }
     }
   }
 
@@ -69,10 +65,6 @@
     &__back {
       &-content {
         &-text {
-          font-size: 1.8rem;
-        }
-
-        &-button {
           font-size: 1.8rem;
         }
       }
@@ -610,6 +602,231 @@
     &__item {
       width: 15vw;
       height: 15vw;
+    }
+  }
+}
+
+// lanscape
+@media (orientation: landscape) and (max-width: 850px) {
+  .text-lead {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .container {
+    padding: 1.5rem 2rem;
+  }
+  .header {
+    &__hamburger {
+      top: 3rem;
+    }
+
+    &__nav {
+      padding: 2rem 3rem;
+
+      &-menu {
+        &-link {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__main-text {
+      top: 25%;
+      width: 50%;
+
+      &-title {
+        font-size: 2.5rem;
+      }
+
+      &-subtitle {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .about {
+    height: 100vh;
+    &__content {
+      flex-direction: row;
+      justify-content: space-around;
+
+      &-image {
+        width: 30%;
+      }
+
+      &-info {
+        align-self: flex-start;
+        width: 50%;
+
+        &-text {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    height: 100vh;
+    &__gallery {
+      grid-template-columns: repeat(4, 130px);
+      grid-template-rows: initial;
+      margin: 2rem auto;
+      height: 150px;
+
+      &-item {
+        height: 130px;
+      }
+    }
+  }
+
+  .offer {
+    height: 100vh;
+
+    &__items {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 24vw;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .card {
+    &__front {
+      &-content {
+        font-size: 0.8rem;
+
+        &-text {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &__back {
+      &-content {
+        padding: 1rem;
+        &-text {
+          font-size: 1rem;
+          min-height: initial;
+        }
+      }
+    }
+  }
+
+  .contact {
+    &__form {
+      &-fields {
+        grid-template-areas:
+          'name email'
+          'phone subject'
+          'message message';
+      }
+
+      &-field {
+        &-input {
+          font-size: 1.3rem;
+          padding: 1.6rem 1rem 0.8rem;
+        }
+
+        &-label {
+          font-size: 1.1rem;
+          top: 1.7rem;
+          left: 1.1rem;
+
+          &.js-focus {
+            font-size: 0.8rem;
+            transform: translateY(-60%);
+          }
+        }
+      }
+    }
+
+    &__items {
+      width: 100%;
+      background-color: $dark-color;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+      }
+    }
+
+    &__item {
+      border: 1px solid darken($medium-color, 70%);
+      flex-basis: 24%;
+      font-size: 0.8rem;
+      margin: 0;
+
+      &-info {
+        font-size: 1.5rem;
+      }
+
+      &-socials {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .footer {
+    &__content {
+      display: flex;
+      justify-content: space-around;
+      font-size: 2rem;
+    }
+
+    &__socials {
+      margin: 0;
+    }
+
+    &__social {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (orientation: landscape) and (max-width: 600px) {
+  .section-title {
+    margin: 1rem 0;
+  }
+  .about {
+    &__content {
+      &-info {
+        &-text {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .portfolio__gallery {
+    height: 135px;
+    margin: 1rem auto;
+  }
+
+  .offer {
+    height: 100vh;
+
+    &__item {
+      width: 24vw;
+      height: 24vw;
     }
   }
 }

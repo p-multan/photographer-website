@@ -67,4 +67,8 @@
     font-size: $font-size + 1rem;
     padding: 1.5rem 3rem;
   }
+  @media (orientation: landscape) and (max-width: 850px) {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
 }
