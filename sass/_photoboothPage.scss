@@ -1,0 +1,59 @@
+.photobooth {
+  &__cover {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 3rem auto;
+    background: url('../images/photobooth.jpg') no-repeat center center/cover;
+  }
+
+  &__info {
+    width: 100%;
+    display: grid;
+    margin-bottom: 2rem;
+
+    &-panel {
+      width: 100%;
+      height: auto;
+      padding: 2rem 2rem 2rem 3rem;
+      background-color: $medium-color;
+      text-transform: uppercase;
+      text-align: left;
+
+      &--even {
+        background-color: initial;
+      }
+
+      &-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &-list {
+        list-style-image: url('../images/tick.png');
+        padding: 2rem;
+        list-style-type: square;
+        font-size: 1.7rem;
+        text-transform: initial;
+
+        &-item {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__summary {
+    width: 100%;
+    padding: 3rem 4rem;
+
+    &-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+    }
+  }
+}

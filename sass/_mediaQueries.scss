@@ -55,7 +55,7 @@
     }
   }
 
-  .photobooth {
+  .photoboothInfo {
     &__content {
       &-info {
         font-size: 2rem;
@@ -125,6 +125,26 @@
             font-size: 2rem;
           }
         }
+      }
+    }
+  }
+
+  .photobooth {
+    &__info {
+      &-panel {
+        &-title {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &__summary {
+      &-title {
+        font-size: 3.5rem;
+      }
+
+      &-text {
+        font-size: 2rem;
       }
     }
   }
@@ -228,7 +248,7 @@
     margin: 3rem auto;
   }
 
-  .photobooth {
+  .photoboothInfo {
     &__content {
       &-title {
         font-size: 4rem;
@@ -305,6 +325,33 @@
             font-size: 2.2rem;
           }
         }
+      }
+    }
+  }
+
+  .photobooth {
+    &__info {
+      &-panel {
+        padding: 4rem 5rem;
+        &-title {
+          font-size: 3rem;
+        }
+        &-list {
+          &-item {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+
+    &__summary {
+      &-title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+
+      &-text {
+        font-size: 2.5rem;
       }
     }
   }
@@ -555,7 +602,7 @@
     background-attachment: fixed;
   }
 
-  .photobooth {
+  .photoboothInfo {
     background-attachment: fixed;
     &__content {
       &-title {
@@ -613,6 +660,27 @@
           }
 
           &-list {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .photobooth {
+    &__cover {
+      height: 400px;
+      background-attachment: fixed;
+    }
+    &__info {
+      grid-template-columns: repeat(3, 1fr);
+      &-panel {
+        padding: 4rem 5rem;
+        &-title {
+          font-size: 3rem;
+        }
+        &-list {
+          &-item {
             font-size: 1.8rem;
           }
         }

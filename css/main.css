@@ -753,13 +753,13 @@ a {
   }
 }
 
-.photobooth {
+.photoboothInfo {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.95))), url(../images/photobooth.jpg) no-repeat center center/cover;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.95) 100%), url(../images/photobooth.jpg) no-repeat center center/cover;
 }
 
-.photobooth__content-title {
+.photoboothInfo__content-title {
   text-transform: uppercase;
   margin-top: 10rem;
   padding: 3rem 4rem;
@@ -768,14 +768,14 @@ a {
   background-color: #e70012;
 }
 
-.photobooth__content-info {
+.photoboothInfo__content-info {
   width: 75%;
   margin: 5rem auto 5rem;
   color: #f3eeec;
   font-size: 1.8rem;
 }
 
-.photobooth__content-button {
+.photoboothInfo__content-button {
   display: inline-block;
   cursor: pointer;
   font-size: 2rem;
@@ -792,35 +792,35 @@ a {
           transform: translateY(0px);
 }
 
-.photobooth__content-button:hover {
+.photoboothInfo__content-button:hover {
   background-color: #e70012;
   color: #f3eeec;
   border-color: #f3eeec;
 }
 
 @media (min-width: 770px) {
-  .photobooth__content-button {
+  .photoboothInfo__content-button {
     font-size: 2.5rem;
     padding: 1.5rem 2.5rem;
   }
 }
 
 @media (min-width: 1050px) {
-  .photobooth__content-button {
+  .photoboothInfo__content-button {
     font-size: 2.8rem;
     padding: 1.5rem 3rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .photobooth__content-button {
+  .photoboothInfo__content-button {
     font-size: 3rem;
     padding: 1.5rem 3rem;
   }
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
-  .photobooth__content-button {
+  .photoboothInfo__content-button {
     font-size: 1.5rem;
     padding: 0.8rem 2rem;
   }
@@ -1200,6 +1200,65 @@ a {
   margin-bottom: 1rem;
 }
 
+.photobooth__cover {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 3rem auto;
+  background: url("../images/photobooth.jpg") no-repeat center center/cover;
+}
+
+.photobooth__info {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.photobooth__info-panel {
+  width: 100%;
+  height: auto;
+  padding: 2rem 2rem 2rem 3rem;
+  background-color: #e4e4e4;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.photobooth__info-panel--even {
+  background-color: initial;
+}
+
+.photobooth__info-panel-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.photobooth__info-panel-list {
+  list-style-image: url("../images/tick.png");
+  padding: 2rem;
+  list-style-type: square;
+  font-size: 1.7rem;
+  text-transform: initial;
+}
+
+.photobooth__info-panel-list-item {
+  margin-bottom: 1rem;
+}
+
+.photobooth__summary {
+  width: 100%;
+  padding: 3rem 4rem;
+}
+
+.photobooth__summary-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.photobooth__summary-text {
+  font-size: 1.7rem;
+}
+
 @media (min-width: 460px) {
   .text-lead {
     font-size: 2.2rem;
@@ -1237,7 +1296,7 @@ a {
     width: 60vw;
     height: 60vw;
   }
-  .photobooth__content-info {
+  .photoboothInfo__content-info {
     font-size: 2rem;
   }
   .card__front-content-text {
@@ -1271,6 +1330,15 @@ a {
     font-size: 3rem;
   }
   .offers__panel-content-package-desc {
+    font-size: 2rem;
+  }
+  .photobooth__info-panel-title {
+    font-size: 3rem;
+  }
+  .photobooth__summary-title {
+    font-size: 3.5rem;
+  }
+  .photobooth__summary-text {
     font-size: 2rem;
   }
 }
@@ -1345,10 +1413,10 @@ a {
         grid-template-columns: repeat(2, 250px);
     margin: 3rem auto;
   }
-  .photobooth__content-title {
+  .photoboothInfo__content-title {
     font-size: 4rem;
   }
-  .photobooth__content-info {
+  .photoboothInfo__content-info {
     font-size: 2.5rem;
   }
   .contact__form {
@@ -1402,6 +1470,22 @@ a {
   }
   .offers__panel-content-package-list {
     font-size: 2.2rem;
+  }
+  .photobooth__info-panel {
+    padding: 4rem 5rem;
+  }
+  .photobooth__info-panel-title {
+    font-size: 3rem;
+  }
+  .photobooth__info-panel-list-item {
+    font-size: 2.2rem;
+  }
+  .photobooth__summary-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .photobooth__summary-text {
+    font-size: 2.5rem;
   }
 }
 
@@ -1643,13 +1727,13 @@ a {
   .portfolio {
     background-attachment: fixed;
   }
-  .photobooth {
+  .photoboothInfo {
     background-attachment: fixed;
   }
-  .photobooth__content-title {
+  .photoboothInfo__content-title {
     font-size: 6rem;
   }
-  .photobooth__content-info {
+  .photoboothInfo__content-info {
     font-size: 3rem;
   }
   .contact__form {
@@ -1691,6 +1775,23 @@ a {
     font-size: 2rem;
   }
   .offers__panel-content-package-list {
+    font-size: 1.8rem;
+  }
+  .photobooth__cover {
+    height: 400px;
+    background-attachment: fixed;
+  }
+  .photobooth__info {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .photobooth__info-panel {
+    padding: 4rem 5rem;
+  }
+  .photobooth__info-panel-title {
+    font-size: 3rem;
+  }
+  .photobooth__info-panel-list-item {
     font-size: 1.8rem;
   }
 }
