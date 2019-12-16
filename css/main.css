@@ -1309,11 +1309,6 @@ a {
   font-size: 1.7rem;
 }
 
-.photobooth__summary-text--last {
-  font-size: 12rem;
-  text-transform: uppercase;
-}
-
 .photobooth__summary-link {
   font-weight: bold;
 }
