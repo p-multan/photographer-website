@@ -308,7 +308,7 @@
   }
 }
 
-.portfolio {
+.portfolioInfo {
   min-height: 100vh;
   background: linear-gradient(
       to bottom,
@@ -339,7 +339,7 @@
       border: 2px solid $dark-color;
 
       &:hover {
-        .portfolio__gallery-image {
+        .portfolioInfo__gallery-image {
           transform: translate(-50%, -50%) scale(1.2);
         }
       }
@@ -506,9 +506,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     &-icon {
-      color: $main-color;
+      width: 30px;
       margin-bottom: 1rem;
     }
 
@@ -521,37 +522,7 @@
       width: 30%;
       margin: 1rem auto;
       display: flex;
-      justify-content: space-around;
-    }
-
-    &-social-icon {
-      color: $main-color;
-      transition: transform 0.3s;
-
-      &--ig {
-        &:hover {
-          background: radial-gradient(
-            circle at 30% 107%,
-            #fdf497 0%,
-            #fdf497 5%,
-            #fd5949 45%,
-            #d6249f 60%,
-            #285aeb 90%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-
-      &--fb {
-        &:hover {
-          color: #4267b2;
-        }
-      }
-
-      &:hover {
-        transform: scale(1.2);
-      }
+      justify-content: center;
     }
 
     &:last-child {
@@ -563,10 +534,6 @@
 .footer {
   min-height: 30vh;
   background-color: $dark-color;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   font-size: 1.4rem;
 
   &__content {
@@ -605,7 +572,7 @@
           background-color: $light-color;
           z-index: -1;
           transform: scale(0);
-          transition: transform 0.3s;
+          transition: transform 0.6s ease-in-out;
         }
 
         &:hover::before {
@@ -630,29 +597,6 @@
       width: 20%;
       display: flex;
       justify-content: space-around;
-    }
-
-    &-social {
-      color: $light-color;
-      font-size: 2.4rem;
-      transition: 0.3s;
-
-      &--fb:hover {
-        color: #4267b2;
-      }
-
-      &--ig:hover {
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
     }
   }
 }

@@ -645,17 +645,17 @@ a {
   }
 }
 
-.portfolio {
+.portfolioInfo {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.7))), url(../images/portfolio_bg.jpg) no-repeat center center/cover;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.7)), url(../images/portfolio_bg.jpg) no-repeat center center/cover;
 }
 
-.portfolio__title {
+.portfolioInfo__title {
   margin-bottom: 0;
 }
 
-.portfolio__gallery {
+.portfolioInfo__gallery {
   height: 60vh;
   width: 80%;
   display: -ms-grid;
@@ -674,18 +674,18 @@ a {
   margin: 2rem auto;
 }
 
-.portfolio__gallery-item {
+.portfolioInfo__gallery-item {
   position: relative;
   overflow: hidden;
   border: 2px solid #02040f;
 }
 
-.portfolio__gallery-item:hover .portfolio__gallery-image {
+.portfolioInfo__gallery-item:hover .portfolioInfo__gallery-image {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
 }
 
-.portfolio__gallery-image {
+.portfolioInfo__gallery-image {
   min-width: 100%;
   min-height: 100%;
   position: absolute;
@@ -699,7 +699,7 @@ a {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
-.portfolio__button {
+.portfolioInfo__button {
   display: inline-block;
   cursor: pointer;
   font-size: 2rem;
@@ -716,35 +716,35 @@ a {
           transform: translateY(0px);
 }
 
-.portfolio__button:hover {
+.portfolioInfo__button:hover {
   background-color: #f3eeec;
   color: #ad9246;
   border-color: #ad9246;
 }
 
 @media (min-width: 770px) {
-  .portfolio__button {
+  .portfolioInfo__button {
     font-size: 2.5rem;
     padding: 1.5rem 2.5rem;
   }
 }
 
 @media (min-width: 1050px) {
-  .portfolio__button {
+  .portfolioInfo__button {
     font-size: 2.8rem;
     padding: 1.5rem 3rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .portfolio__button {
+  .portfolioInfo__button {
     font-size: 3rem;
     padding: 1.5rem 3rem;
   }
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
-  .portfolio__button {
+  .portfolioInfo__button {
     font-size: 1.5rem;
     padding: 0.8rem 2rem;
   }
@@ -986,10 +986,13 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__item-icon {
-  color: #ad9246;
+  width: 30px;
   margin-bottom: 1rem;
 }
 
@@ -1004,31 +1007,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.contact__item-social-icon {
-  color: #ad9246;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.contact__item-social-icon--ig:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.contact__item-social-icon--fb:hover {
-  color: #4267b2;
-}
-
-.contact__item-social-icon:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact__item:last-child {
@@ -1099,10 +1080,10 @@ a {
   z-index: -1;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
 .footer__content-ig-link-text:hover::before {
@@ -1134,23 +1115,6 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.footer__content-social {
-  color: #f3eeec;
-  font-size: 2.4rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.footer__content-social--fb:hover {
-  color: #4267b2;
-}
-
-.footer__content-social--ig:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .offers__tabs {
@@ -1274,7 +1238,7 @@ a {
   width: 100%;
   height: 300px;
   margin: 3rem auto;
-  background: url("../images/photobooth.jpg") no-repeat center center/cover;
+  background: url("../images/photobooth/1.jpg") no-repeat center top/cover;
 }
 
 .photobooth__info {
@@ -1314,6 +1278,23 @@ a {
   margin-bottom: 1rem;
 }
 
+.photobooth__photos {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.photobooth__photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.photobooth__photo-item {
+  width: 100%;
+}
+
 .photobooth__summary {
   width: 100%;
   padding: 3rem 4rem;
@@ -1326,6 +1307,36 @@ a {
 
 .photobooth__summary-text {
   font-size: 1.7rem;
+}
+
+.photobooth__summary-text--last {
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+
+.photobooth__summary-link {
+  font-weight: bold;
+}
+
+.photobooth__summary-link:hover {
+  color: #3b5998;
+}
+
+.portfolio {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.glide__slide {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  overflow: hidden;
+  width: 100%;
+}
+
+.glide__slide--active {
+  opacity: 1;
 }
 
 @media (min-width: 460px) {
@@ -1374,7 +1385,7 @@ a {
   .card__back-content-text {
     font-size: 1.8rem;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     -ms-grid-rows: (200px)[2];
         grid-template-rows: repeat(2, 200px);
     -ms-grid-columns: (200px)[2];
@@ -1472,7 +1483,7 @@ a {
   .card__back-content-text {
     font-size: 2.8rem;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     -ms-grid-rows: (250px)[2];
         grid-template-rows: repeat(2, 250px);
     -ms-grid-columns: (250px)[2];
@@ -1633,7 +1644,7 @@ a {
   .card__back-content-text {
     font-size: 1.7rem;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     -ms-grid-rows: (300px)[2];
         grid-template-rows: repeat(2, 300px);
     -ms-grid-columns: (300px)[2];
@@ -1693,6 +1704,23 @@ a {
   }
   .footer__content-social--fb {
     margin-right: 2rem;
+  }
+  .photobooth__photos {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: initial;
+        grid-template-rows: initial;
+    grid-gap: 2rem;
+  }
+  .photobooth__photo {
+    width: 100%;
+    overflow: hidden;
+  }
+  .photobooth__photo-item {
+    width: 100%;
   }
 }
 
@@ -1783,7 +1811,7 @@ a {
   .header__main-text-subtitle {
     font-size: 2.5rem;
   }
-  .portfolio {
+  .portfolioInfo {
     background-attachment: fixed;
   }
   .photoboothInfo {
@@ -1837,7 +1865,7 @@ a {
     font-size: 1.8rem;
   }
   .photobooth__cover {
-    height: 400px;
+    height: 500px;
     background-attachment: fixed;
   }
   .photobooth__info {
@@ -1852,6 +1880,10 @@ a {
   }
   .photobooth__info-panel-list-item {
     font-size: 1.8rem;
+  }
+  .photobooth__summary-text {
+    width: 80%;
+    margin: 2rem auto;
   }
 }
 
@@ -1893,14 +1925,14 @@ a {
   .card__back-content-text {
     font-size: 2rem;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     -ms-grid-columns: (300px)[4];
         grid-template-columns: repeat(4, 300px);
     -ms-grid-rows: initial;
         grid-template-rows: initial;
     margin: 2rem auto;
   }
-  .portfolio__gallery-item {
+  .portfolioInfo__gallery-item {
     height: 300px;
   }
   .contact__form {
@@ -1978,10 +2010,10 @@ a {
   .about__content-info-text {
     font-size: 1.4rem;
   }
-  .portfolio {
+  .portfolioInfo {
     min-height: 100vh;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     -ms-grid-columns: (130px)[4];
         grid-template-columns: repeat(4, 130px);
     -ms-grid-rows: initial;
@@ -1989,7 +2021,7 @@ a {
     margin: 2rem auto;
     height: 150px;
   }
-  .portfolio__gallery-item {
+  .portfolioInfo__gallery-item {
     height: 130px;
   }
   .offer {
@@ -2112,7 +2144,7 @@ a {
   .about__content-info-text {
     font-size: 1.2rem;
   }
-  .portfolio__gallery {
+  .portfolioInfo__gallery {
     height: 135px;
     margin: 1rem auto;
   }

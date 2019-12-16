@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio | Szymon Michoń</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Istok+Web:400,700|Open+Sans:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/glide.core.css" />
+    <link rel="stylesheet" href="./css/glide.theme.css" />
+    <script src="./scripts/glide.js"></script>
+    <script
+      src="https://kit.fontawesome.com/609f286988.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <header class="header header--inner">
+        <div class="header__hamburger" id="header-hamburger">
+          <span class="header__hamburger-bar"></span>
+        </div>
+        <nav class="header__nav">
+          <a href="index.html" class="header__nav-logo"
+            ><img
+              src="./images/logo_b.png"
+              alt="Logo fotografa"
+              class="header__nav-logo-image"
+          /></a>
+          <div class="header__nav-overlay" id="header-overlay">
+            <ul class="header__nav-menu">
+              <div class="header__nav-menu-half">
+                <li class="header__nav-menu-item">
+                  <a href="./index.html#about" class="header__nav-menu-link">O mnie</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="./portfolio.html" class="header__nav-menu-link header__nav-menu-link--active">Portfolio</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="./offer.html" class="header__nav-menu-link">Oferta</a>
+                </li>
+              </div>
+              <div class="header__nav-menu-half">
+                <li class="header__nav-menu-item">
+                  <a href="./photobooth.html" class="header__nav-menu-link">Fotobudka</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Blog</a>
+                </li>
+                <li class="header__nav-menu-item header__nav-menu-item--last">
+                  <a href="./index.html#contact" class="header__nav-menu-link">Kontakt</a>
+                </li>
+              </div class="header__nav-menu-half">
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide"><img class="glide__slide-image" src="./images/port/1.jpg" alt=""></li>
+                        <li class="glide__slide"><img class="glide__slide-image" src="./images/port/2.jpg" alt=""></li>
+                        <li class="glide__slide"><img class="glide__slide-image" src="./images/port/3.jpg" alt=""></li>
+                        <li class="glide__slide"><img class="glide__slide-image" src="./images/port/4.jpg" alt=""></li>
+                        <li class="glide__slide"><img class="glide__slide-image" src="./images/port/5.jpg" alt=""></li>
+                    </ul>
+                </div>
+                
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer py-3">
+      <div class="container">
+        <div class="footer__content">
+          <a href="https://www.instagram.com/szymon.michon/" target="_blank" class="footer__content-ig-link">
+            <span class="footer__content-ig-link-text">Śledź mnie na instagramie</span>
+          </a>
+          <div class="footer__content-items">
+            <p class="footer__content-text">
+              2019 Szymon Michoń &copy;
+            </p>
+            <div class="footer__content-socials">
+              <i
+                class="fab fa-facebook-square footer__content-social footer__content-social--fb"
+              ></i>
+              <i class="fab fa-instagram footer__content-social footer__content-social--ig"></i>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </footer>
+
+    <script>
+        const config = {
+            gap: 20,
+            type: 'carousel',
+            perView: 3,
+            keyboard: true,
+            peek: {
+                before: '-800px',
+                after: '-800px'
+            },
+            focusAt: 'center',
+            animationDuration: 600,
+            breakpoints: {
+                1300: {
+                    perView: 1
+                }
+            }
+        }
+
+
+        new Glide('.glide', config).mount()
+    </script>
+</body>
+</html>
