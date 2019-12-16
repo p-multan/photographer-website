@@ -566,42 +566,96 @@
 .footer {
   min-height: 30vh;
   background-color: $dark-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   font-size: 1.4rem;
 
-  &__text {
-    color: $light-color;
-  }
-
-  &__socials {
-    width: 20%;
-    margin: 1rem auto 0;
+  &__content {
+    height: 100%;
     display: flex;
-    justify-content: space-around;
-  }
+    flex-direction: column;
+    justify-content: space-between;
 
-  &__social {
-    color: $light-color;
-    font-size: 2.4rem;
-    transition: 0.3s;
+    &-ig-link {
+      display: block;
+      height: 200px;
+      width: 90%;
+      margin: 0 auto;
+      background: url(../images/ig__link__bg.jpg) no-repeat center center/cover;
+      position: relative;
 
-    &--fb:hover {
-      color: #4267b2;
+      &-text {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 70%;
+        height: 100px;
+        background-color: $dark-color;
+        color: $main-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+          content: '';
+          @include position(absolute, 0, 0, 0, 0);
+          background-color: $light-color;
+          z-index: -1;
+          transform: scale(0);
+          transition: transform 0.3s;
+        }
+
+        &:hover::before {
+          transform: scale(1);
+        }
+      }
     }
 
-    &--ig:hover {
-      background: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    &-items {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &-text {
+      color: $light-color;
+      font-size: 2rem;
+    }
+
+    &-socials {
+      width: 20%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-social {
+      color: $light-color;
+      font-size: 2.4rem;
+      transition: 0.3s;
+
+      &--fb:hover {
+        color: #4267b2;
+      }
+
+      &--ig:hover {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 }
