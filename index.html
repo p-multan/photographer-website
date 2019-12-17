@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Szymon Michoń - Fotografia</title>
+    <meta name="keywords" content="fotografia, fotograf, Tarnów, ślub, sesja, zdjęcia, fotobudka, wesele, pamiątka">
+    <meta name="description" content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice.">
+    <meta name="og:title" content="Fotograf Ślubny Szymon Michoń">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice.">
+    <meta name="og:site_name" content="Szymon Michoń">
+    <meta name="og:url" content="http://www.szymonmichon.pl">
     <link
       href="https://fonts.googleapis.com/css?family=Istok+Web:400,700|Open+Sans:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <script
-      src="https://kit.fontawesome.com/609f286988.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/handleHamburger.js" defer></script>
+    <script src="./scripts/handleInputs.js" defer></script>
   </head>
   <body>
     <header class="header header--home">
@@ -26,7 +30,7 @@
           <a href="index.html" class="header__nav-logo"
             ><img
               src="./images/logo_b.png"
-              alt="Logo fotografa"
+              alt="Szymon Michoń - Fotografia"
               class="header__nav-logo-image"
           /></a>
           <div class="header__nav-overlay" id="header-overlay">
@@ -309,12 +313,12 @@
           <div class="contact__items my-2">
             <div class="contact__items-container">            
               <div class="contact__item">
-                <img class="" src="./images/icons/phone.png" alt="">
-                <p class="contact__item-info">792 848 517</p>
+                <img src="./images/icons/phone.png" alt="Numer Telefonu">
+                <a href="tel:792848517" class="contact__item-info">792 848 517</a>
               </div>
               <div class="contact__item">
-                <img src="./images/icons/envelope.png" alt="">
-                <p class="contact__item-info">foto@szymonmichon.pl</p>
+                <img src="./images/icons/envelope.png" alt="Adres Mailowy">
+                <a href="mailto:foto@szymonmichon.pl" class="contact__item-info">foto@szymonmichon.pl</a>
               </div>
               <div class="contact__item">
                 <div class="contact__item-socials">
@@ -378,28 +382,6 @@
           </div>
         </div>        
       </div>
-    </footer>
-
-    <script>
-      const inputs = document.querySelectorAll('.js-input');
-
-      inputs.forEach(input => {
-        input.addEventListener('focus', e => {
-          e.target.previousElementSibling.classList.add('js-focus');
-        });
-      });
-
-      inputs.forEach(input => {
-        input.addEventListener('blur', e => {
-          if (e.target.value === '') {
-            e.target.previousElementSibling.classList.remove('js-focus');
-          } else {
-            return;
-          }
-        });
-      });
-    </script>
-
-    
+    </footer>    
   </body>
 </html>

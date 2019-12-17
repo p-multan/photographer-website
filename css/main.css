@@ -572,6 +572,7 @@ a {
           transform: perspective(1200px) rotateY(180deg);
   border: 2px solid #02040f;
   padding: 1rem;
+  cursor: initial;
 }
 
 .card__back-image {
@@ -593,10 +594,10 @@ a {
   width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (100px)[3];
-      grid-template-rows: repeat(3, 100px);
-  -ms-grid-columns: 80%;
-      grid-template-columns: 80%;
+  -ms-grid-rows: (220px)[3];
+      grid-template-rows: repeat(3, 220px);
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   row-gap: 4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1291,8 +1292,19 @@ a {
   margin: 2rem auto;
 }
 
+.portfolio__gallery {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.portfolio__gallery-item {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .glide {
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
 }
 
@@ -1350,12 +1362,6 @@ a {
   }
   .card__front-content-text {
     font-size: 2.5rem;
-  }
-  .portfolioInfo__gallery {
-    -ms-grid-rows: (140px)[3];
-        grid-template-rows: repeat(3, 140px);
-    -ms-grid-columns: 90%;
-        grid-template-columns: 90%;
   }
   .contact__form-field-input {
     font-size: 1.6rem;
@@ -1444,10 +1450,10 @@ a {
     font-size: 50rem;
   }
   .portfolioInfo__gallery {
-    -ms-grid-rows: (180px)[3];
-        grid-template-rows: repeat(3, 180px);
-    -ms-grid-columns: 80%;
-        grid-template-columns: 80%;
+    -ms-grid-rows: (260px)[3];
+        grid-template-rows: repeat(3, 260px);
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     margin: 3rem auto;
   }
   .photoboothInfo__content-title {
@@ -1599,10 +1605,10 @@ a {
     font-size: 2rem;
   }
   .portfolioInfo__gallery {
-    -ms-grid-rows: (170px)[3];
-        grid-template-rows: repeat(3, 170px);
-    -ms-grid-columns: 60%;
-        grid-template-columns: 60%;
+    -ms-grid-rows: (300px)[3];
+        grid-template-rows: repeat(3, 300px);
+    -ms-grid-columns: 80%;
+        grid-template-columns: 80%;
     margin: 5rem auto;
   }
   .contact__form-fields {
@@ -1675,9 +1681,6 @@ a {
   }
   .photobooth__photo-item {
     width: 100%;
-  }
-  .glide {
-    height: 80vh;
   }
 }
 

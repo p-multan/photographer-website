@@ -72,13 +72,6 @@
     }
   }
 
-  .portfolioInfo {
-    &__gallery {
-      grid-template-rows: repeat(3, 140px);
-      grid-template-columns: 90%;
-    }
-  }
-
   .contact {
     &__form {
       &-field {
@@ -222,8 +215,8 @@
   }
 
   .portfolioInfo__gallery {
-    grid-template-rows: repeat(3, 180px);
-    grid-template-columns: 80%;
+    grid-template-rows: repeat(3, 260px);
+    grid-template-columns: 100%;
     margin: 3rem auto;
   }
 
@@ -407,8 +400,8 @@
   }
 
   .portfolioInfo__gallery {
-    grid-template-rows: repeat(3, 170px);
-    grid-template-columns: 60%;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: 80%;
     margin: 5rem auto;
   }
 
@@ -493,10 +486,6 @@
         width: 100%;
       }
     }
-  }
-
-  .glide {
-    height: 80vh;
   }
 }
 
