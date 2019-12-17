@@ -31,7 +31,7 @@
       }
 
       &-list {
-        list-style-image: url('../images/tick.png');
+        list-style-image: url('../images/icons/tick.png');
         padding: 2rem;
         list-style-type: square;
         font-size: 1.7rem;
@@ -65,11 +65,15 @@
 
     &-title {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
 
     &-text {
       font-size: 1.7rem;
+
+      &--promo {
+        margin-top: 2rem;
+      }
     }
 
     &-link {

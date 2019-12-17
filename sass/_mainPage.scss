@@ -274,36 +274,13 @@
   }
 
   &__back {
-    background-color: $light-color;
+    background-color: $main-color;
     transform: perspective(1200px) rotateY(180deg);
     border: 2px solid $dark-color;
+    padding: 1rem;
 
-    &-content {
+    &-image {
       width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 3rem 2rem;
-      font-size: 1.8rem;
-
-      &-text {
-        text-align: justify;
-        min-height: 120px;
-      }
-
-      &-button {
-        @include button(
-          1.8rem,
-          $dark-color,
-          $main-color,
-          $main-color,
-          $main-color,
-          $light-color,
-          false,
-          100%
-        );
-      }
     }
   }
 }
@@ -322,13 +299,12 @@
   }
 
   &__gallery {
-    height: 60vh;
+    min-height: 60vh;
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: repeat(2, 130px);
-    gap: 1rem;
-    row-gap: 1rem;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: 80%;
+    row-gap: 4rem;
     justify-content: center;
     align-content: center;
     margin: 2rem auto;
@@ -337,10 +313,13 @@
       position: relative;
       overflow: hidden;
       border: 2px solid $dark-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         .portfolioInfo__gallery-image {
-          transform: translate(-50%, -50%) scale(1.2);
+          transform: scale(1.2);
         }
       }
     }
@@ -348,10 +327,7 @@
     &-image {
       min-width: 100%;
       min-height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      object-fit: cover;
       transition: transform 0.2s linear;
     }
   }
@@ -515,7 +491,7 @@
 
     &-info {
       color: $light-color;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
 
     &-socials {
@@ -523,6 +499,27 @@
       margin: 1rem auto;
       display: flex;
       justify-content: center;
+    }
+
+    &-social {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-icon {
+        fill: $main-color;
+        transition: 0.3s;
+
+        &--fb:hover {
+          fill: #4267b2;
+        }
+
+        &--ig:hover {
+          fill: url(#ig-logo-gradient);
+        }
+      }
     }
 
     &:last-child {
@@ -593,10 +590,17 @@
       font-size: 2rem;
     }
 
-    &-socials {
-      width: 20%;
-      display: flex;
-      justify-content: space-around;
+    &-social {
+      fill: $light-color;
+      transition: 0.3s;
+
+      &--fb:hover {
+        fill: #4267b2;
+      }
+
+      &--ig:hover {
+        fill: url(#ig-logo-gradient);
+      }
     }
   }
 }

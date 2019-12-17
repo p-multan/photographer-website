@@ -1,3 +1,4 @@
+// 460px
 @include mQ(small) {
   .text-lead {
     font-size: 2.2rem;
@@ -69,20 +70,12 @@
         font-size: 2.5rem;
       }
     }
-
-    &__back {
-      &-content {
-        &-text {
-          font-size: 1.8rem;
-        }
-      }
-    }
   }
 
   .portfolioInfo {
     &__gallery {
-      grid-template-rows: repeat(2, 200px);
-      grid-template-columns: repeat(2, 200px);
+      grid-template-rows: repeat(3, 140px);
+      grid-template-columns: 90%;
     }
   }
 
@@ -226,21 +219,11 @@
         }
       }
     }
-
-    &__back {
-      &-content {
-        padding: 6rem 4rem;
-
-        &-text {
-          font-size: 2.8rem;
-        }
-      }
-    }
   }
 
   .portfolioInfo__gallery {
-    grid-template-rows: repeat(2, 250px);
-    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: 80%;
     margin: 3rem auto;
   }
 
@@ -331,7 +314,7 @@
     &__summary {
       &-title {
         font-size: 4rem;
-        margin-bottom: 2rem;
+        margin: 3rem 0;
       }
 
       &-text {
@@ -421,20 +404,11 @@
         }
       }
     }
-
-    &__back {
-      &-content {
-        padding: 3rem 4rem;
-        &-text {
-          font-size: 1.7rem;
-        }
-      }
-    }
   }
 
   .portfolioInfo__gallery {
-    grid-template-rows: repeat(2, 300px);
-    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(3, 170px);
+    grid-template-columns: 60%;
     margin: 5rem auto;
   }
 
@@ -519,6 +493,10 @@
         width: 100%;
       }
     }
+  }
+
+  .glide {
+    height: 80vh;
   }
 }
 
@@ -615,6 +593,12 @@
 
   .portfolioInfo {
     background-attachment: fixed;
+
+    &__gallery {
+      grid-template-rows: 250px;
+      grid-template-columns: repeat(3, 330px);
+      gap: 3rem;
+    }
   }
 
   .photoboothInfo {
@@ -776,24 +760,12 @@
         }
       }
     }
-
-    &__back {
-      &-content {
-        &-text {
-          font-size: 2rem;
-        }
-      }
-    }
   }
 
   .portfolioInfo__gallery {
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: initial;
+    grid-template-rows: 300px;
+    grid-template-columns: repeat(3, 530px);
     margin: 2rem auto;
-
-    &-item {
-      height: 300px;
-    }
   }
 
   .contact {
@@ -927,16 +899,6 @@
 
         &-text {
           font-size: 1.3rem;
-        }
-      }
-    }
-
-    &__back {
-      &-content {
-        padding: 1rem;
-        &-text {
-          font-size: 1rem;
-          min-height: initial;
         }
       }
     }
