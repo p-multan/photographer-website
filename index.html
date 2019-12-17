@@ -246,7 +246,7 @@
         <p class="text-lead">
           Zachęcam do kontaktu, na pewno znajdziemy wspólne rozwiązanie.
         </p>
-        <form class="contact__form" action="https://formspree.io/xwkpzbeg" method="POST">
+        <form class="contact__form">
           <div class="contact__form-fields">
             <div class="contact__form-field contact__form-field--name">
               <label for="name" class="contact__form-field-label"
@@ -270,18 +270,6 @@
                 required
               />
             </div>
-            <div class="contact__form-field contact__form-field--subject">
-              <label for="subject" class="contact__form-field-label"
-                >Temat</label
-              >
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                class="contact__form-field-input js-input"
-                required
-              />
-            </div>
             <div class="contact__form-field contact__form-field--phone">
               <label for="phone" class="contact__form-field-label"
                 >Telefon</label
@@ -294,6 +282,18 @@
                 required
               />
             </div>
+            <div class="contact__form-field contact__form-field--subject">
+              <label for="subject" class="contact__form-field-label"
+                >Temat</label
+              >
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="contact__form-field-input js-input"
+                required
+              />
+            </div>        
             <div class="contact__form-field contact__form-field--message">
               <label
                 for="message"

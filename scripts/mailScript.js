@@ -24,7 +24,7 @@ form.addEventListener('submit', e => {
     message: e.target.message.value
   };
 
-  const url = 'https://formspree.io/xwkpzbeg';
+  const url = 'https://formspree.io/xknonpkb';
   const headers = {
     'Content-Type': 'application/json'
   };

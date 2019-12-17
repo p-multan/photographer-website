@@ -20,10 +20,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/glide.core.css" />
-    <link rel="stylesheet" href="./css/glide.theme.css" />
-    <script src="./scripts/glide.min.js"></script>
-    <script src="./scripts/handleHamburger.js" defer></script>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
+    <script src="./scripts/handleHamburger.js" defer></script>    
+    <script src="./scripts/jquery-3.4.1.min.js" defer></script>
+    <script src="./scripts/owl.carousel.min.js" defer></script>
+    <script src="./scripts/sliderSettings.js" defer></script>
 </head>
 <body>
     <header class="header header--inner">
@@ -67,42 +69,34 @@
     </header>
 
     <section class="portfolio">
-      <h2 class="section-title">Portfolio</h2>
-            <div class="glide hide-small-medium">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide"><img src="./images/portfolio-page/1.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/2.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/3.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/4.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/5.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/6.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/7.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/8.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/9.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/10.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/11.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/12.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/13.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/14.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/15.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/16.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/17.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/18.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/19.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/20.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/21.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/22.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/23.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="./images/portfolio-page/24.jpg" alt=""></li>
-                    </ul>
-                </div>
-                
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
-                </div>
+            <div class="portfolio__slider hide-small-medium">
+              <div class="owl-carousel owl-theme">
+                <div><img src="./images/portfolio-page/1.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/2.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/3.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/4.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/6.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/7.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/8.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/9.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/10.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/11.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/12.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/13.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/14.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/15.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/16.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/17.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/18.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/19.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/20.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/21.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/22.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/23.jpg" alt=""></div>
+                <div><img src="./images/portfolio-page/24.jpg" alt=""></div>
+              </div>
             </div>
+          
 
             <div class="portfolio__gallery hide-desktop">
               <img class="portfolio__gallery-item" src="./images/portfolio-page/1.jpg" alt="">
@@ -164,27 +158,5 @@
         </div>        
       </div>
     </footer>
-
-    <script>
-          const config = {
-            gap: 15,
-            type: 'carousel',
-            perView: 3,
-            keyboard: true,
-            peek: {
-                before: '-800px',
-                after: '-800px'
-            },
-            focusAt: 'center',
-            animationDuration: 600,
-            breakpoints: {
-                1300: {
-                    perView: 1
-                }
-            }
-         }
-        
-        new Glide('.glide', config).mount();        
-    </script>
 </body>
 </html>

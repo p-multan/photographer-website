@@ -1344,7 +1344,7 @@ a {
     font-size: 4rem;
   }
   .hide-small-medium {
-    display: none;
+    display: none !important;
   }
   .header__nav-menu-link {
     font-size: 3rem;
@@ -1416,7 +1416,7 @@ a {
     font-size: 5rem;
   }
   .hide-small-medium {
-    display: none;
+    display: none !important;
   }
   .header__hamburger {
     width: 60px;
@@ -1541,10 +1541,10 @@ a {
 
 @media (min-width: 1050px) {
   .hide-small-medium {
-    display: block;
+    display: block !important;
   }
   .hide-desktop {
-    display: none;
+    display: none !important;
   }
   .header__main-text {
     top: 40%;
