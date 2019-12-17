@@ -1,24 +1,4 @@
 const form = document.querySelector('.contact__form');
-const formButton = document.querySelector('.contact__form-button');
-const formResult = document.querySelector('.contact__formResult');
-
-const nameInput = document.querySelector('input[name="name"]');
-const emailInput = document.querySelector('input[name="email"]');
-const subjectInput = document.querySelector('input[name="subject"]');
-const phoneInput = document.querySelector('input[name="phone"]');
-const messageInput = document.querySelector('textarea');
-
-// function success() {
-//   form.reset();
-//   formResult.style.backgroundColor = 'green';
-//   formResult.innerText = 'Wysłano pomyślnie formularz';
-// }
-
-// function fail() {
-//   form.reset();
-//   formResult.style.backgroundColor = 'red';
-//   formResult.innerText = 'Wystąpił błąd';
-// }
 
 function showAlert(msg, className) {
   const div = document.createElement('div');
@@ -35,6 +15,7 @@ function showAlert(msg, className) {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+
   const data = {
     name: e.target.name.value,
     email: e.target.email.value,
@@ -44,7 +25,6 @@ form.addEventListener('submit', e => {
   };
 
   const url = 'https://formspree.io/xwkpzbeg';
-
   const headers = {
     'Content-Type': 'application/json'
   };
@@ -62,13 +42,13 @@ form.addEventListener('submit', e => {
         );
         form.reset();
         showAlert(
-          'niestety wiadomość nie została wysłana, proszę jeszcze raz wysłać poprawnie wypełniony formularz, jeżeli próba znowu się nie powiedzie proszę o kontakt poprzez niżej podane sposoby',
+          'Niestety wiadomość nie została wysłana, proszę jeszcze raz wysłać poprawnie wypełniony formularz, jeżeli próba znowu się nie powiedzie proszę o kontakt poprzez niżej podane sposoby.',
           'fail'
         );
       } else {
         form.reset();
         showAlert(
-          'dziękuję za wysłanie wiadomości, postaram się odpowiedzieć w możliwie najkrótszym czasie',
+          'Dziękuję za wysłanie wiadomości, postaram się odpowiedzieć w możliwie najkrótszym czasie.',
           'success'
         );
       }
@@ -76,7 +56,7 @@ form.addEventListener('submit', e => {
     .catch(err => {
       form.reset();
       showAlert(
-        'niestety wiadomość nie została wysłana, proszę jeszcze raz wysłać poprawnie wypełniony formularz, jeżeli próba znowu się nie powiedzie proszę o kontakt poprzez niżej podane sposoby',
+        'Niestety wiadomość nie została wysłana, proszę jeszcze raz wysłać poprawnie wypełniony formularz, jeżeli próba znowu się nie powiedzie proszę o kontakt poprzez niżej podane sposoby.',
         'fail'
       );
     });
