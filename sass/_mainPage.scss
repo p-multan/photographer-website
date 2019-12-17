@@ -377,6 +377,23 @@
 
 .contact {
   text-align: center;
+
+  &__alert {
+    width: 100%;
+    padding: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+
+    &--success {
+      background-color: #326632;
+    }
+
+    &--fail {
+      background-color: #da3434;
+    }
+  }
+
   &__form {
     width: 80vw;
     margin: 0 auto;

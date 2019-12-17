@@ -766,6 +766,22 @@ a {
   text-align: center;
 }
 
+.contact__alert {
+  width: 100%;
+  padding: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.contact__alert--success {
+  background-color: #326632;
+}
+
+.contact__alert--fail {
+  background-color: #da3434;
+}
+
 .contact__form {
   width: 80vw;
   margin: 0 auto;
