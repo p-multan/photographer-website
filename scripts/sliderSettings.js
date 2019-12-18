@@ -1,16 +1,16 @@
-$(document).ready(function() {
-  $('.owl-carousel').owlCarousel({
-    dots: true,
-    dotsEach: true,
-    items: 3,
-    margin: 15,
-    loop: true,
-    center: true,
-    autoWidth: true,
-    nav: true,
-    navText: ['<div></div>', '<div></div>'],
-    slideTransition: 'linear',
-    animateIn: true,
-    animateOut: true
-  });
-});
+const splideSettings = {
+  type: 'loop',
+  perPage: 2,
+  width: '100%',
+  height: '80vh',
+  focus: 'center',
+  easing: 'ease-in-out',
+  arrows: true,
+  cover: true,
+  gap: '3rem',
+  focus: 'center',
+  heightRatio: 0.5,
+  lazyLoad: 'sequential'
+};
+
+new Splide('.splide', splideSettings).mount();

@@ -852,10 +852,13 @@
   .portfolioInfo {
     min-height: 100vh;
     &__gallery {
-      grid-template-columns: repeat(4, 130px);
-      grid-template-rows: initial;
-      margin: 2rem auto;
-      height: 150px;
+      height: 130px;
+      width: 100%;
+      grid-template-columns: repeat(3, 190px);
+      grid-template-rows: 80%;
+      margin: 1rem auto;
+      align-items: center;
+      gap: 1rem;
 
       &-item {
         height: 130px;

@@ -23,7 +23,6 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-  outline: none;
 }
 
 .container {
@@ -1991,12 +1990,17 @@ a {
     min-height: 100vh;
   }
   .portfolioInfo__gallery {
-    -ms-grid-columns: (130px)[4];
-        grid-template-columns: repeat(4, 130px);
-    -ms-grid-rows: initial;
-        grid-template-rows: initial;
-    margin: 2rem auto;
-    height: 150px;
+    height: 130px;
+    width: 100%;
+    -ms-grid-columns: (190px)[3];
+        grid-template-columns: repeat(3, 190px);
+    -ms-grid-rows: 80%;
+        grid-template-rows: 80%;
+    margin: 1rem auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
   }
   .portfolioInfo__gallery-item {
     height: 130px;
