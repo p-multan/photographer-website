@@ -1,162 +1,3 @@
-.header {
-  width: 100%;
-  position: relative;
-  text-align: center;
-
-  &--home {
-    height: 100vh;
-    background: linear-gradient(
-        to bottom,
-        rgba(149, 149, 149, 0.6),
-        rgba(0, 0, 0, 0.8)
-      ),
-      url(../images/showcase.jpg) no-repeat 60% bottom/cover;
-  }
-
-  &--inner {
-    position: relative;
-    height: 16vh;
-    background: none;
-  }
-
-  &__hamburger {
-    @include position(fixed, 4.5rem, 4rem);
-    z-index: 10;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-
-    &.js-menu-open {
-      .header__hamburger-bar {
-        background-color: transparent;
-
-        &::before {
-          transform: rotate(-45deg);
-        }
-
-        &::after {
-          transform: rotate(45deg);
-        }
-
-        &::before,
-        &::after {
-          top: 0;
-        }
-      }
-    }
-
-    &-bar,
-    &-bar::before,
-    &-bar::after {
-      width: 100%;
-      content: '';
-      @include position(absolute, 0, 0, 0, 0);
-      height: 5px;
-      background-color: #000;
-      transition: 0.2s;
-    }
-
-    &-bar::before {
-      top: -17px;
-    }
-
-    &-bar {
-      top: calc(50% - 2.5px);
-    }
-
-    &-bar::after {
-      top: 17px;
-    }
-  }
-
-  &__nav {
-    padding: 4rem 3rem;
-    width: 100%;
-    display: flex;
-
-    &-logo {
-      width: 70px;
-
-      &-image {
-        height: 70px;
-      }
-    }
-
-    &-overlay {
-      background-color: rgba(0, 0, 0, 0.9);
-      @include position(fixed, 0, 0, 0, 0);
-      z-index: 5;
-      transform: scale(0);
-      opacity: 0;
-      transition: scale 0.6s, opacity 0.6s;
-
-      &.js-menu-open {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    &-menu {
-      @include position(relative);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $light-color;
-
-      &-item {
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-      }
-
-      &-link {
-        font-size: 2rem;
-        transition: color 0.2s;
-
-        &:hover,
-        &--active {
-          color: $main-color;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-
-  &__main-text {
-    @include position(absolute, 30%, 50%);
-    transform: translateX(50%);
-    width: 65%;
-
-    &-title {
-      font-size: 3rem;
-      color: #fff;
-      padding: 2rem 3rem;
-      background-color: #000;
-      margin-bottom: 2rem;
-    }
-
-    &-subtitle {
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      font-weight: normal;
-      color: $main-color;
-    }
-
-    &-button {
-      @include button(
-        2rem,
-        $light-color,
-        transparent,
-        $light-color,
-        $light-color,
-        transparent,
-        true,
-        false
-      );
-    }
-  }
-}
-
 .about {
   &__title {
     margin-bottom: 2rem;
@@ -183,8 +24,67 @@
   }
 }
 
+.portfolioInfo {
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/portfolio_bg.jpg) no-repeat center center/cover;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__gallery {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+
+    &-item {
+      position: relative;
+      overflow: hidden;
+      width: 250px;
+      height: 250px;
+      margin-bottom: 3rem;
+      border: 2px solid $dark-color;
+
+      &:hover {
+        .portfolioInfo__gallery-image {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &-image {
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.2s linear;
+    }
+  }
+
+  &__button {
+    @include button(
+      2rem,
+      $light-color,
+      $dark-color,
+      $dark-color,
+      $main-color,
+      $light-color,
+      false,
+      60%
+    );
+  }
+}
+
 .offer {
-  // padding-bottom: 4rem;
   &__items {
     margin: 3rem 0 2rem;
     display: flex;
@@ -195,8 +95,8 @@
 
   &__item {
     position: relative;
-    width: 80vw;
-    height: 80vw;
+    width: 250px;
+    height: 250px;
     margin-bottom: 3rem;
   }
 
@@ -272,67 +172,6 @@
   }
 }
 
-.portfolioInfo {
-  min-height: 100vh;
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.8),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(../images/portfolio_bg.jpg) no-repeat center center/cover;
-
-  &__title {
-    margin-bottom: 0;
-  }
-
-  &__gallery {
-    min-height: 60vh;
-    width: 80%;
-    display: grid;
-    grid-template-rows: repeat(3, 220px);
-    grid-template-columns: 100%;
-    row-gap: 4rem;
-    justify-content: center;
-    align-content: center;
-    margin: 2rem auto;
-
-    &-item {
-      position: relative;
-      overflow: hidden;
-      border: 2px solid $dark-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        .portfolioInfo__gallery-image {
-          transform: scale(1.2);
-        }
-      }
-    }
-
-    &-image {
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      transition: transform 0.2s linear;
-    }
-  }
-
-  &__button {
-    @include button(
-      2rem,
-      $light-color,
-      $dark-color,
-      $dark-color,
-      $main-color,
-      $light-color,
-      false,
-      50%
-    );
-  }
-}
-
 .photoboothInfo {
   min-height: 100vh;
   background: linear-gradient(
@@ -369,7 +208,7 @@
         $light-color,
         #e70012,
         false,
-        50%
+        60%
       );
     }
   }
@@ -413,7 +252,6 @@
 
     &-field {
       position: relative;
-      // height: 3rem;
       &--name {
         grid-area: name;
       }
@@ -528,83 +366,6 @@
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-}
-
-.footer {
-  min-height: 30vh;
-  background-color: $dark-color;
-  font-size: 1.4rem;
-
-  &__content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &-ig-link {
-      display: block;
-      height: 200px;
-      width: 90%;
-      margin: 0 auto;
-      background: url(../images/ig__link__bg.jpg) no-repeat center center/cover;
-      position: relative;
-
-      &-text {
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        width: 70%;
-        height: 100px;
-        background-color: $dark-color;
-        color: $main-color;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        &::before {
-          content: '';
-          @include position(absolute, 0, 0, 0, 0);
-          background-color: $light-color;
-          z-index: -1;
-          transform: scale(0);
-          transition: transform 0.6s ease-in-out;
-        }
-
-        &:hover::before {
-          transform: scale(1);
-        }
-      }
-    }
-
-    &-items {
-      margin-top: 4rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    &-text {
-      color: $light-color;
-      font-size: 2rem;
-    }
-
-    &-social {
-      fill: $light-color;
-      transition: 0.3s;
-
-      &--fb:hover {
-        fill: #4267b2;
-      }
-
-      &--ig:hover {
-        fill: url(#ig-logo-gradient);
-      }
     }
   }
 }

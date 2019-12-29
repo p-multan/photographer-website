@@ -49,6 +49,15 @@
     }
   }
 
+  .portfolioInfo {
+    &__gallery {
+      &-item {
+        width: 60vw;
+        height: 60vw;
+      }
+    }
+  }
+
   .offer {
     &__item {
       width: 60vw;
@@ -108,6 +117,12 @@
           }
         }
       }
+    }
+  }
+
+  .portfolio {
+    &__category {
+      width: 70%;
     }
   }
 
@@ -214,11 +229,11 @@
     }
   }
 
-  .portfolioInfo__gallery {
-    grid-template-rows: repeat(3, 260px);
-    grid-template-columns: 100%;
-    margin: 3rem auto;
-  }
+  // .portfolioInfo__gallery {
+  //   grid-template-rows: repeat(3, 260px);
+  //   grid-template-columns: 100%;
+  //   margin: 3rem auto;
+  // }
 
   .photoboothInfo {
     &__content {
@@ -286,6 +301,18 @@
           }
         }
       }
+    }
+  }
+
+  .portfolio {
+    &__categories {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__category {
+      width: 40%;
+      margin-bottom: 0;
     }
   }
 
@@ -370,16 +397,29 @@
     }
   }
 
+  .portfolioInfo {
+    &__gallery {
+      width: 90%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-item {
+        width: 25vw;
+        height: 25vw;
+      }
+    }
+  }
+
   .offer {
     min-height: 100vh;
     &__items {
-      margin: 5rem 0 2rem;
+      width: 90%;
+      margin: 5rem auto 2rem;
       min-height: 60vh;
-      display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
-      width: 100%;
     }
     &__item {
       width: 25vw;
@@ -397,12 +437,6 @@
         }
       }
     }
-  }
-
-  .portfolioInfo__gallery {
-    grid-template-rows: repeat(3, 300px);
-    grid-template-columns: 80%;
-    margin: 5rem auto;
   }
 
   .contact {
@@ -492,6 +526,11 @@
 // 1200px
 @include mQ(xlarge) {
   .header {
+    &__picture {
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
     &__hamburger {
       display: none;
     }
@@ -505,6 +544,7 @@
     &__nav {
       justify-content: space-between;
       padding: 0 1rem;
+      position: initial;
 
       &-overlay {
         position: static;
@@ -515,7 +555,10 @@
       }
 
       &-logo {
-        @include position(absolute, 20px, 50%, null, null);
+        top: 20px;
+        right: 50%;
+        left: initial;
+        bottom: initial;
         transform: translateX(50%);
         z-index: 11;
 
@@ -577,16 +620,6 @@
       &-subtitle {
         font-size: 2.5rem;
       }
-    }
-  }
-
-  .portfolioInfo {
-    background-attachment: fixed;
-
-    &__gallery {
-      grid-template-rows: 250px;
-      grid-template-columns: repeat(3, 330px);
-      gap: 3rem;
     }
   }
 
@@ -655,6 +688,19 @@
     }
   }
 
+  .portfolio {
+    &__category {
+      height: 250px;
+      line-height: 250px;
+      width: 40%;
+      margin-bottom: 0;
+
+      &-title {
+        font-size: 3rem;
+      }
+    }
+  }
+
   .photobooth {
     &__cover {
       height: 500px;
@@ -692,7 +738,7 @@
           rgba(149, 149, 149, 0.6),
           rgba(0, 0, 0, 0.8)
         ),
-        url(../images/showcase.jpg) no-repeat center 50% / cover;
+        url(../images/home-slider/home_slider1.jpg) no-repeat center 50% / cover;
     }
 
     &__nav {
@@ -734,10 +780,24 @@
     }
   }
 
+  .portfolioInfo {
+    &__gallery {
+      width: 100%;
+
+      &-item {
+        width: 20vw;
+        height: 20vw;
+      }
+    }
+  }
+
   .offer {
+    &__items {
+      width: 100%;
+    }
     &__item {
-      width: 18vw;
-      height: 18vw;
+      width: 20vw;
+      height: 20vw;
     }
   }
 
@@ -749,12 +809,6 @@
         }
       }
     }
-  }
-
-  .portfolioInfo__gallery {
-    grid-template-rows: 300px;
-    grid-template-columns: repeat(3, 530px);
-    margin: 2rem auto;
   }
 
   .contact {
@@ -777,6 +831,15 @@
 
 // 2000px
 @include mQ(giga) {
+  .portfolioInfo {
+    &__gallery {
+      &-item {
+        width: 15vw;
+        height: 15vw;
+      }
+    }
+  }
+
   .offer {
     &__item {
       width: 15vw;
@@ -800,6 +863,14 @@
     padding: 1.5rem 2rem;
   }
   .header {
+    &__picture {
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      height: auto;
+    }
+
     &__hamburger {
       top: 3rem;
     }
@@ -852,16 +923,15 @@
   .portfolioInfo {
     min-height: 100vh;
     &__gallery {
-      height: 130px;
-      width: 100%;
-      grid-template-columns: repeat(3, 190px);
-      grid-template-rows: 80%;
-      margin: 1rem auto;
+      width: 80%;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
 
       &-item {
-        height: 130px;
+        width: 24vw;
+        height: 24vw;
+        margin-bottom: 0;
       }
     }
   }
@@ -870,17 +940,17 @@
     min-height: 100vh;
 
     &__items {
+      width: 80%;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
-      height: 24vw;
-      margin: 0;
+      justify-content: space-between;
+      margin: 0 auto;
       padding: 0;
     }
 
     &__item {
-      width: 20vw;
-      height: 20vw;
+      width: 24vw;
+      height: 24vw;
     }
   }
 

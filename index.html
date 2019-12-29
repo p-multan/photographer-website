@@ -22,11 +22,19 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./scripts/handleHamburger.js" defer></script>
+    <script src="./scripts/headerSlider.js" defer></script>
     <script src="./scripts/handleInputs.js" defer></script>
     <script src="./scripts/mailScript.js" defer></script>
   </head>
   <body>
     <header class="header header--home">
+      <div class="header__overlay"></div>
+      <img src="./images/home-slider/home_slider6.jpg" alt="slider image" class="header__picture header__picture--6">
+      <img src="./images/home-slider/home_slider5.jpg" alt="slider image" class="header__picture header__picture--5">
+      <img src="./images/home-slider/home_slider4.jpg" alt="slider image" class="header__picture header__picture--4">
+      <img src="./images/home-slider/home_slider3.jpg" alt="slider image" class="header__picture header__picture--3">
+      <img src="./images/home-slider/home_slider2.jpg" alt="slider image" class="header__picture header__picture--2">
+      <img src="./images/home-slider/home_slider1.jpg" alt="slider image" class="header__picture header__picture--1">
         <div class="header__hamburger" id="header-hamburger">
           <span class="header__hamburger-bar"></span>
         </div>
@@ -41,24 +49,24 @@
             <ul class="header__nav-menu">
               <div class="header__nav-menu-half">
                 <li class="header__nav-menu-item">
-                  <a href="#about" class="header__nav-menu-link">O mnie</a>
+                  <a href="#o_mnie" class="header__nav-menu-link">O mnie</a>
                 </li>
                 <li class="header__nav-menu-item">
                   <a href="#portfolio" class="header__nav-menu-link">Portfolio</a>
                 </li>
                 <li class="header__nav-menu-item">
-                  <a href="#offer" class="header__nav-menu-link">Oferta</a>
+                  <a href="#oferta" class="header__nav-menu-link">Oferta</a>
                 </li>
               </div>
               <div class="header__nav-menu-half">
                 <li class="header__nav-menu-item">
-                  <a href="#photobooth" class="header__nav-menu-link">Fotobudka</a>
+                  <a href="#fotobudka" class="header__nav-menu-link">Fotobudka</a>
                 </li>
                 <li class="header__nav-menu-item">
-                  <a href="#" class="header__nav-menu-link">Blog</a>
+                  <a href="http://szymonmichon.blogspot.com/" target="_blank" class="header__nav-menu-link">Blog</a>
                 </li>
                 <li class="header__nav-menu-item header__nav-menu-item--last">
-                  <a href="#contact" class="header__nav-menu-link">Kontakt</a>
+                  <a href="#kontakt" class="header__nav-menu-link">Kontakt</a>
                 </li>
               </div class="header__nav-menu-half">
             </ul>
@@ -69,11 +77,11 @@
           <h2 class="header__main-text-subtitle">
             Fotografia ślubna. Sesje zdjęciowe. Fotobudka.
           </h2>
-          <a href="#about" class="header__main-text-button">Kim jestem ?</a>
+          <a href="#o_mnie" class="header__main-text-button">Kim jestem ?</a>
         </div>
     </header>
 
-    <section class="about bg--medium" id="about">
+    <section class="about bg--medium" id="o_mnie">
       <div class="container">
         <h2 class="about__title section-title">O mnie</h2>
         <div class="about__content">
@@ -138,7 +146,7 @@
         <div class="portfolioInfo__gallery">
           <div class="portfolioInfo__gallery-item">
             <img
-              src="./images/portfolio-section/port_min1.JPG"
+              src="./images/portfolio-section/port_min1.jpg"
               alt=""
               class="portfolioInfo__gallery-image"
             />
@@ -152,7 +160,7 @@
           </div>
           <div class="portfolioInfo__gallery-item">
             <img
-              src="./images/portfolio-section/port_min3.JPG"
+              src="./images/portfolio-section/port_min3.jpg"
               alt=""
               class="portfolioInfo__gallery-image"
             />
@@ -162,7 +170,7 @@
       </div>
     </section>
 
-    <section class="offer bg--medium" id="offer">
+    <section class="offer bg--medium" id="oferta">
       <div class="container">
         <h2 class="section-title">Oferta</h2>
         <p class="text-lead">
@@ -181,7 +189,7 @@
               </div>
 
               <div class="card__back">
-                <img class="card__back-image" src="./images/cards/card__wedding.JPG" alt="">
+                <img class="card__back-image" src="./images/cards/card__wedding.jpg" alt="">
               </div>
             </div>
           </div>
@@ -220,11 +228,11 @@
             </div>
           </div>
         </div>
-        <a href="./offer.html" class="offer__button">Szczegóły oraz cennik</a>
+        <a href="./oferta.html" class="offer__button">Szczegóły oraz cennik</a>
       </div>
     </section>
 
-    <section class="photoboothInfo" id="photobooth">
+    <section class="photoboothInfo" id="fotobudka">
       <div class="container">
         <h2 class="section-title">Fotobudka</h2>
         <p class="text-lead">Organizujesz imprezę, urodziny, studniówkę, wesele, wieczór panieński lub kawalerski?</p>
@@ -233,13 +241,13 @@
           <p class="photoboothInfo__content-info">
             Podaruj swoim gościom atrakcję, dzięki której choć na chwilę będą mogli wrócić do lat, kiedy bezkarne były przebieranki i beztroskie swawole. Jeśli szukasz niecodziennego pomysłu, którym wszystkich zaskoczysz, a jednocześnie zafundujesz moc wrażeń, nie ma lepszej opcji niż oferowana przeze mnie fotobudka.
           </p>
-          <a href="./photobooth.html" class="photoboothInfo__content-button">Więcej informacji</a>
+          <a href="./fotobudka.html" class="photoboothInfo__content-button">Więcej informacji</a>
         </div>
       </div>
 
     </section>
 
-    <section class="contact py-2" id="contact">
+    <section class="contact py-2" id="kontakt">
         <h2 class="section-title">
           Kontakt
         </h2>

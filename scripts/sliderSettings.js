@@ -2,7 +2,7 @@ const splideSettings = {
   type: 'loop',
   perPage: 2,
   width: '100%',
-  height: '80vh',
+  height: '70vh',
   focus: 'center',
   easing: 'ease-in-out',
   arrows: true,
