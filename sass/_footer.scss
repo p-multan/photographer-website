@@ -51,6 +51,7 @@
     &-items {
       margin-top: 4rem;
       display: flex;
+      flex-direction: column;
       justify-content: space-around;
       align-items: center;
     }
@@ -60,12 +61,25 @@
       font-size: 2rem;
     }
 
+    &-socials {
+      margin-top: 1rem;
+      width: 80%;
+    }
+
     &-social {
       fill: $light-color;
       transition: 0.3s;
 
       &--fb:hover {
         fill: #4267b2;
+      }
+
+      &--tt:hover {
+        fill: #3ba9ee;
+      }
+
+      &--tumblr:hover {
+        fill: #ad9246;
       }
 
       &--ig:hover {

@@ -11,8 +11,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     z-index: 2;
+    text-align: center;
 
     &-photo {
       display: flex;
@@ -20,10 +22,10 @@
       justify-content: space-around;
       align-items: center;
       width: 100%;
-      height: 40vh;
-      margin-bottom: 2rem;
+      height: 45vh;
+      margin: 2rem 0;
       &-image {
-        width: 100%;
+        width: 85%;
         border-radius: 50%;
       }
 
@@ -440,7 +442,15 @@
         }
 
         &--ig:hover {
-          fill: url(#ig-logo-gradient);
+          fill: url(#ig-logo-gradient1);
+        }
+
+        &--tt:hover {
+          fill: #3ba9ee;
+        }
+
+        &--tumblr:hover {
+          fill: $light-color;
         }
       }
     }
