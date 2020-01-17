@@ -17,7 +17,8 @@
 
   &--inner {
     position: relative;
-    height: 16vh;
+    height: 19vh;
+    min-height: 100px;
     background: none;
   }
 
@@ -37,10 +38,11 @@
 
   &__picture {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
     height: 100%;
+    transform: translateX(-40%);
+
     opacity: 0;
     z-index: 1;
     transition: opacity 1.5s;
@@ -108,11 +110,11 @@
 
     &-logo {
       width: 70px;
-      @include position(absolute, 3rem, null, null, 4rem);
+      @include position(absolute, 2.8rem, null, null, 4rem);
       z-index: 3;
 
       &-image {
-        height: 70px;
+        height: 80px;
       }
     }
 
@@ -146,6 +148,10 @@
       &-link {
         font-size: 2rem;
         transition: color 0.2s;
+
+        &--logo {
+          display: none;
+        }
 
         &:hover,
         &--active {

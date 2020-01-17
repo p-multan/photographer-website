@@ -26,7 +26,7 @@
         font-weight: bold;
         width: 70%;
         height: 100px;
-        background-color: $dark-color;
+        background-color: transparentize($dark-color, 0.2);
         color: $main-color;
         position: absolute;
         top: 50%;
@@ -36,7 +36,7 @@
         &::before {
           content: '';
           @include position(absolute, 0, 0, 0, 0);
-          background-color: $light-color;
+          background-color: transparentize($light-color, 0.2);
           z-index: -1;
           transform: scale(0);
           transition: transform 0.6s ease-in-out;

@@ -1,17 +1,47 @@
 .about {
+  background: url('../images/about_bcg.svg') no-repeat left bottom/cover,
+    $main-color;
+
   &__title {
     margin-bottom: 2rem;
   }
 
   &__content {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    z-index: 2;
 
-    &-image {
-      width: 50vw;
-      margin-bottom: 4rem;
-      border-radius: 50%;
+    &-photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 40vh;
+      margin-bottom: 2rem;
+      &-image {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      &-link {
+        display: block;
+        background-color: $dark-color;
+        color: $light-color;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
     }
 
     &-info {
@@ -85,6 +115,57 @@
 }
 
 .offer {
+  background: url('../images/offer_bcg.svg') no-repeat left bottom/cover,
+    $light-color;
+  &__description {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+
+    &--more {
+      overflow: hidden;
+      height: auto;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+
+      &.js-show {
+        max-height: 800px;
+      }
+    }
+
+    &-arrow {
+      width: 15%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.15s ease-in-out;
+      &-item {
+        width: 3rem;
+        height: 3rem;
+        border-style: solid;
+        border-color: $main-color;
+        border-width: 0 0.5rem 0.5rem 0;
+        transform: rotate(45deg);
+        transition: border-width 0.15s ease-in-out 0.15s,
+          margin 0.15s ease-in-out 0.15s;
+
+        &.closed {
+          margin-top: 2rem;
+          border-width: 0.5rem 0 0 0.5rem;
+        }
+      }
+
+      &:hover {
+        transform: translateY(12%);
+      }
+    }
+
+    &-item {
+      margin-bottom: 1rem;
+    }
+  }
+
   &__items {
     margin: 3rem 0 2rem;
     display: flex;
@@ -311,7 +392,7 @@
   &__items-container {
     width: 80vw;
     overflow: hidden;
-    margin: 3rem auto 0;
+    margin: 3rem auto 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -366,6 +447,49 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__address-info {
+    &-container {
+      width: 80vw;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      padding: 2rem;
+      background-color: $dark-color;
+      min-height: 180px;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--map {
+        border: 1px solid $dark-color;
+      }
+
+      &-text {
+        color: $light-color;
+        font-size: 1.8rem;
+      }
+    }
+
+    &-summary {
+      padding: 2rem;
+      background-color: $dark-color;
+      color: $light-color;
+      width: 80vw;
+      margin: 0 auto;
+      font-size: 1.8rem;
+
+      &-strong {
+        color: $main-color;
+      }
     }
   }
 }

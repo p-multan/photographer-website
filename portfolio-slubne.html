@@ -27,44 +27,65 @@
 </head>
 <body>
     <header class="header header--inner">
-        <div class="header__hamburger" id="header-hamburger">
-          <span class="header__hamburger-bar"></span>
+      <div class="header__hamburger" id="header-hamburger">
+        <span class="header__hamburger-bar"></span>
+      </div>
+      <nav class="header__nav">
+        <a href="index.html" class="header__nav-logo"
+          ><img
+            src="./images/logo_b.png"
+            alt="Szymon Michoń - Fotografia"
+            class="header__nav-logo-image"
+        /></a>
+
+        <div class="header__nav-overlay" id="header-overlay">
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu-item">
+              <a href="./index.html#o_mnie" class="header__nav-menu-link"
+                >O mnie</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="./portfolio.html" class="header__nav-menu-link header__nav-menu-link--active"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="./oferta.html" class="header__nav-menu-link">Oferta</a>
+            </li>
+
+            <li class="header__nav-menu-item header__nav-menu-item--logo">
+              <a href="./index.html" class="header__nav-menu-link--logo"
+                ><img
+                  src="./images/logo_b.png"
+                  alt="Szymon Michoń - Fotografia"
+                  class="header__nav-menu-link-logo"
+              /></a>
+            </li>
+
+            <li class="header__nav-menu-item">
+              <a href="./fotobudka.html" class="header__nav-menu-link"
+                >Fotobudka</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a
+                href="http://szymonmichon.blogspot.com/"
+                target="_blank"
+                class="header__nav-menu-link"
+                >Blog</a
+              >
+            </li>
+            <li class="header__nav-menu-item header__nav-menu-item--last">
+              <a href="./index.html#kontakt" class="header__nav-menu-link"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
         </div>
-        <nav class="header__nav">
-          <a href="index.html" class="header__nav-logo"
-            ><img
-              src="./images/logo_b.png"
-              alt="Powrót do strony głównej"
-              class="header__nav-logo-image"
-          /></a>
-          <div class="header__nav-overlay" id="header-overlay">
-            <ul class="header__nav-menu">
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="./index.html#o_mnie" class="header__nav-menu-link">O mnie</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="./portfolio.html" class="header__nav-menu-link header__nav-menu-link--active">Portfolio</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="./oferta.html" class="header__nav-menu-link">Oferta</a>
-                </li>
-              </div>
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="./fotobudka.html" class="header__nav-menu-link">Fotobudka</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="http://szymonmichon.blogspot.com/" target="_blank" class="header__nav-menu-link">Blog</a>
-                </li>
-                <li class="header__nav-menu-item header__nav-menu-item--last">
-                  <a href="./index.html#kontakt" class="header__nav-menu-link">Kontakt</a>
-                </li>
-              </div class="header__nav-menu-half">
-            </ul>
-          </div>
-        </nav>
+      </nav>
     </header>
+
     <main>
       <section class="portfolio">
               <div class="portfolio__slider hide-small-medium">

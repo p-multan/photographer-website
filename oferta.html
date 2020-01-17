@@ -24,45 +24,66 @@
     <script src="./scripts/handleTabs.js" defer></script>
   </head>
   <body>
-    <header class="header header--inner">
-        <div class="header__hamburger" id="header-hamburger">
-          <span class="header__hamburger-bar"></span>
+        <header class="header header--inner">
+      <div class="header__hamburger" id="header-hamburger">
+        <span class="header__hamburger-bar"></span>
+      </div>
+      <nav class="header__nav">
+        <a href="index.html" class="header__nav-logo"
+          ><img
+            src="./images/logo_b.png"
+            alt="Szymon Michoń - Fotografia"
+            class="header__nav-logo-image"
+        /></a>
+
+        <div class="header__nav-overlay" id="header-overlay">
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu-item">
+              <a href="./index.html#o_mnie" class="header__nav-menu-link"
+                >O mnie</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="./portfolio.html" class="header__nav-menu-link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="./oferta.html" class="header__nav-menu-link  header__nav-menu-link--active">Oferta</a>
+            </li>
+
+            <li class="header__nav-menu-item header__nav-menu-item--logo">
+              <a href="./index.html" class="header__nav-menu-link--logo"
+                ><img
+                  src="./images/logo_b.png"
+                  alt="Szymon Michoń - Fotografia"
+                  class="header__nav-menu-link-logo"
+              /></a>
+            </li>
+
+            <li class="header__nav-menu-item">
+              <a href="./fotobudka.html" class="header__nav-menu-link"
+                >Fotobudka</a
+              >
+            </li>
+            <li class="header__nav-menu-item">
+              <a
+                href="http://szymonmichon.blogspot.com/"
+                target="_blank"
+                class="header__nav-menu-link"
+                >Blog</a
+              >
+            </li>
+            <li class="header__nav-menu-item header__nav-menu-item--last">
+              <a href="./index.html#kontakt" class="header__nav-menu-link"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
         </div>
-        <nav class="header__nav">
-          <a href="index.html" class="header__nav-logo"
-            ><img
-              src="./images/logo_b.png"
-              alt="Powrót do strony głównej"
-              class="header__nav-logo-image"
-          /></a>
-          <div class="header__nav-overlay" id="header-overlay">
-            <ul class="header__nav-menu">
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="./index.html#o_mnie" class="header__nav-menu-link">O mnie</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="./portfolio.html" class="header__nav-menu-link">Portfolio</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="./oferta.html" class="header__nav-menu-link header__nav-menu-link--active">Oferta</a>
-                </li>
-              </div>
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="./fotobudka.html" class="header__nav-menu-link">Fotobudka</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="http://szymonmichon.blogspot.com/" target="_blank" class="header__nav-menu-link">Blog</a>
-                </li>
-                <li class="header__nav-menu-item header__nav-menu-item--last">
-                  <a href="./index.html#kontakt" class="header__nav-menu-link">Kontakt</a>
-                </li>
-              </div class="header__nav-menu-half">
-            </ul>
-          </div>
-        </nav>
+      </nav>
     </header>
+
     <main>
       <section class="offers">
           <div class="container">
@@ -136,7 +157,7 @@
                           <div class="offers__panel-content-packages offers__panel-content-packages--single">
                               <div class="offers__panel-content-package offers__panel-content-package--single">
                                   <ul class="offers__panel-content-package-list">
-                                      <li class="offers__panel-content-package-list-item">cena <strong>550 zł – 750 zł</strong></li>
+                                      <li class="offers__panel-content-package-list-item">cena <strong>550 zł</strong></li>
                                       <li class="offers__panel-content-package-list-item">sesja w wybranej przez Państwa Młodych lub zaproponowanej przeze mnie lokalizacji,</li>
                                       <li class="offers__panel-content-package-list-item">czas trwania sesji – <strong>3 godziny</strong></li>
                                       <li class="offers__panel-content-package-list-item"><strong>30 - 40 starannie przygotowanych zdjęć gotowych do druku</strong>, zdjęcia zostaną udostępnione w internetowej galerii zabezpieczonej hasłem oraz nagrane na pendrive</li>
@@ -153,7 +174,7 @@
                           <div class="offers__panel-content-packages offers__panel-content-packages--single">
                               <div class="offers__panel-content-package offers__panel-content-package--single">
                                   <ul class="offers__panel-content-package-list">
-                                      <li class="offers__panel-content-package-list-item">cena <strong>350 zł – 550 zł</strong></li>
+                                      <li class="offers__panel-content-package-list-item">cena <strong>350 zł</strong></li>
                                       <li class="offers__panel-content-package-list-item">sesja w wybranej przez Państwa Młodych lub zaproponowanej przeze mnie lokalizacji,</li>
                                       <li class="offers__panel-content-package-list-item">czas trwania sesji – <strong>2 godziny</strong></li>
                                       <li class="offers__panel-content-package-list-item"><strong>20 starannie przygotowanych zdjęć gotowych do druku</strong>, zdjęcia zostaną udostępnione w internetowej galerii zabezpieczonej hasłem oraz nagrane na pendrive</li>
@@ -221,28 +242,5 @@
         </div>        
       </div>
     </footer>
-
-    <!-- <script>
-        const tabs = document.querySelector('.js-tabs');
-        const singleTabs = document.querySelectorAll('.js-tab');
-        const panels = document.querySelectorAll('.js-panel');
-
-        tabs.addEventListener('click', (e) => {
-            if(e.target.tagName === 'LI') {
-                const targetPanel = document.querySelector(e.target.dataset.info);
-                panels.forEach(panel => {
-                    if(panel === targetPanel) {
-                        // DO ZOPTYMALIZAOWANIA
-                        panel.classList.add('js-active');
-                        singleTabs.forEach(tab => tab.classList.remove('js-active'));
-                        document.querySelector(`[data-info="${e.target.dataset.info}"]`).classList.add('js-active');
-                    } else {
-                        panel.classList.remove('js-active');
-                        
-                    }
-                })
-            }
-        });
-    </script> -->
   </body>
 </html>

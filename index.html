@@ -3,125 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Szymon Michoń - fotografia</title>
-    <meta name="keywords" content="fotografia, fotograf, Tarnów, ślub, sesja, zdjęcia, fotobudka, wesele, pamiątka">
-    <meta name="description" content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice.">
-    <meta name="og:title" content="Fotograf Ślubny Szymon Michoń">
-    <meta name="og:type" content="website">
-    <meta name="og:description" content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice.">
-    <meta name="og:site_name" content="Szymon Michoń">
-    <meta name="og:url" content="http://www.szymonmichon.pl">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta
+      name="keywords"
+      content="fotografia, fotograf, Tarnów, ślub, sesja, zdjęcia, fotobudka, wesele, pamiątka"
+    />
+    <meta
+      name="description"
+      content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice."
+    />
+    <meta name="og:title" content="Fotograf Ślubny Szymon Michoń" />
+    <meta name="og:type" content="website" />
+    <meta
+      name="og:description"
+      content="Szymon Michoń - pasjonat fotografii. Świadczę usługi takie jak profesjonalna fotografia ślubna, sesje zdjęciowe oraz wynajem fotobudki. Fotograf ślubny Tarnów oraz okolice."
+    />
+    <meta name="og:site_name" content="Szymon Michoń" />
+    <meta name="og:url" content="http://www.szymonmichon.pl" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Istok+Web:400,700|Open+Sans:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBESly3D3FATBrV5BeEr2KZc03adAUIwVA&callback=initMap"
+    ></script>
+    <script src="./scripts/headerMap.js" defer></script>
     <script src="./scripts/handleHamburger.js" defer></script>
     <script src="./scripts/headerSlider.js" defer></script>
+    <script src="./scripts/headerArrow.js" defer></script>
     <script src="./scripts/handleInputs.js" defer></script>
     <script src="./scripts/mailScript.js" defer></script>
+    <script src="./scripts/contactPopup.js" defer></script>
   </head>
   <body>
     <header class="header header--home">
       <div class="header__overlay"></div>
-      <img src="./images/home-slider/home_slider6.jpg" alt="slider image" class="header__picture header__picture--6">
-      <img src="./images/home-slider/home_slider5.jpg" alt="slider image" class="header__picture header__picture--5">
-      <img src="./images/home-slider/home_slider4.jpg" alt="slider image" class="header__picture header__picture--4">
-      <img src="./images/home-slider/home_slider3.jpg" alt="slider image" class="header__picture header__picture--3">
-      <img src="./images/home-slider/home_slider2.jpg" alt="slider image" class="header__picture header__picture--2">
-      <img src="./images/home-slider/home_slider1.jpg" alt="slider image" class="header__picture header__picture--1">
-        <div class="header__hamburger" id="header-hamburger">
-          <span class="header__hamburger-bar"></span>
+      <img
+        src="./images/home-slider/home_slider6.jpg"
+        alt="slider image"
+        class="header__picture header__picture--6"
+      />
+      <img
+        src="./images/home-slider/home_slider5.jpg"
+        alt="slider image"
+        class="header__picture header__picture--5"
+      />
+      <img
+        src="./images/home-slider/home_slider4.jpg"
+        alt="slider image"
+        class="header__picture header__picture--4"
+      />
+      <img
+        src="./images/home-slider/home_slider3.jpg"
+        alt="slider image"
+        class="header__picture header__picture--3"
+      />
+      <img
+        src="./images/home-slider/home_slider2.jpg"
+        alt="slider image"
+        class="header__picture header__picture--2"
+      />
+      <img
+        src="./images/home-slider/home_slider1.jpg"
+        alt="slider image"
+        class="header__picture header__picture--1"
+      />
+      <div class="header__hamburger" id="header-hamburger">
+        <span class="header__hamburger-bar"></span>
+      </div>
+      <nav class="header__nav">
+        <a href="index.html" class="header__nav-logo"
+          ><img
+            src="./images/logo_b.png"
+            alt="Szymon Michoń - Fotografia"
+            class="header__nav-logo-image"
+        /></a>
+
+        <div class="header__nav-overlay" id="header-overlay">
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu-item">
+              <a href="#o_mnie" class="header__nav-menu-link">O mnie</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="#portfolio" class="header__nav-menu-link">Portfolio</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a href="#oferta" class="header__nav-menu-link">Oferta</a>
+            </li>
+
+            <li class="header__nav-menu-item header__nav-menu-item--logo">
+              <a href="index.html" class="header__nav-menu-link--logo"
+                ><img
+                  src="./images/logo_b.png"
+                  alt="Szymon Michoń - Fotografia"
+                  class="header__nav-menu-link-logo"
+              /></a>
+            </li>
+
+            <li class="header__nav-menu-item">
+              <a href="#fotobudka" class="header__nav-menu-link">Fotobudka</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a
+                href="http://szymonmichon.blogspot.com/"
+                target="_blank"
+                class="header__nav-menu-link"
+                >Blog</a
+              >
+            </li>
+            <li class="header__nav-menu-item header__nav-menu-item--last">
+              <a href="#kontakt" class="header__nav-menu-link">Kontakt</a>
+            </li>
+          </ul>
         </div>
-        <nav class="header__nav">
-          <a href="index.html" class="header__nav-logo"
-            ><img
-              src="./images/logo_b.png"
-              alt="Szymon Michoń - Fotografia"
-              class="header__nav-logo-image"
-          /></a>
-          <div class="header__nav-overlay" id="header-overlay">
-            <ul class="header__nav-menu">
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="#o_mnie" class="header__nav-menu-link">O mnie</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="#portfolio" class="header__nav-menu-link">Portfolio</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="#oferta" class="header__nav-menu-link">Oferta</a>
-                </li>
-              </div>
-              <div class="header__nav-menu-half">
-                <li class="header__nav-menu-item">
-                  <a href="#fotobudka" class="header__nav-menu-link">Fotobudka</a>
-                </li>
-                <li class="header__nav-menu-item">
-                  <a href="http://szymonmichon.blogspot.com/" target="_blank" class="header__nav-menu-link">Blog</a>
-                </li>
-                <li class="header__nav-menu-item header__nav-menu-item--last">
-                  <a href="#kontakt" class="header__nav-menu-link">Kontakt</a>
-                </li>
-              </div class="header__nav-menu-half">
-            </ul>
-          </div>
-        </nav>
-        <div class="header__main-text">
-          <h1 class="header__main-text-title">Szymon Michoń</h1>
-          <h2 class="header__main-text-subtitle">
-            Fotografia ślubna. Sesje zdjęciowe. Fotobudka.
-          </h2>
-          <a href="#o_mnie" class="header__main-text-button">Kim jestem?</a>
-        </div>
+      </nav>
+      <div class="header__main-text">
+        <h1 class="header__main-text-title">Szymon Michoń</h1>
+        <h2 class="header__main-text-subtitle">
+          Fotografia ślubna. Sesje zdjęciowe. Fotobudka.
+        </h2>
+        <a href="#o_mnie" class="header__main-text-button">Kim jestem?</a>
+      </div>
     </header>
 
     <main>
       <section class="about bg--medium" id="o_mnie">
         <div class="container">
-          <h2 class="about__title section-title">O mnie</h2>
+          <h2 class="about__title section-title">Kim jestem?</h2>
           <div class="about__content">
-            <img
-              src="./images/about-picture-mobile.jpg"
-              alt="Zdjęcie przedstawiające właściciela strony - Szymona"
-              class="about__content-image hide-desktop"
-            />
-            <img
-              src="./images/about-picture-desktop.jpg"
-              alt="Zdjęcie przedstawiające właściciela strony - Szymona"
-              class="about__content-image hide-small-medium"
-            />
+            <div class="about__content-photo">
+              <img
+                src="./images/about-picture-mobile.jpg"
+                alt="Zdjęcie przedstawiające właściciela strony - Szymona"
+                class="about__content-photo-image hide-desktop"
+              />
+              <img
+                src="./images/about-picture-desktop.png"
+                alt="Zdjęcie przedstawiające właściciela strony - Szymona"
+                class="about__content-photo-image hide-small-medium"
+              />
+              <a href="./poznajmy-sie.html" class="about__content-photo-link">
+                Poznaj mnie lepiej
+              </a>
+            </div>
             <div class="about__content-info">
               <p class="about__content-info-text">
-                Cześć! Cieszę się, że tu jesteś.
+                Cześć! Cieszę się, że tu zaglądasz.
               </p>
               <p class="about__content-info-text">
-                Mam na imię Szymon i jestem pasjonatem fotografii. Choć na co dzień
-                korzystam z aparatów cyfrowych, podobnie jak wielu cenionych
-                fotografów zaczynałem od fotografii tradycyjnej, która do tej pory
-                jest bliska memu sercu.
+                Mam na imię Szymon i jestem pasjonatem fotografii. Choć na co
+                dzień korzystam z aparatów cyfrowych, podobnie jak wielu
+                cenionych fotografów zaczynałem od fotografii tradycyjnej, która
+                do tej pory jest bliska memu sercu.
               </p>
               <p class="about__content-info-text hide-small-medium">
                 Za co głównie uwielbiam fotografię? Za to, że zdjęcia mogą
-                opowiedzieć pewną historię, przekazać emocje, utrwalić chwile, które
-                już nie wrócą. Lubię fotografować ludzi i ich uczucia. Radość
-                sprawia mi również dzielenie się fotografiami, kontakt z odbiorcą za
-                pomocą obrazu.
+                opowiedzieć pewną historię, przekazać emocje, utrwalić chwile,
+                które już nie wrócą. Lubię fotografować ludzi i ich uczucia.
+                Radość sprawia mi również dzielenie się fotografiami, kontakt z
+                odbiorcą za pomocą obrazu.
               </p>
               <p class="about__content-info-text hide-small-medium">
                 W swoich zdjęciach stawiam na naturalność i prostotę. Starannie
-                dobrany, przemyślany kadr w połączeniu z delikatną obróbką w
-                programie graficznym jest moim przepisem na dobre zdjęcie.
+                dobrany, przemyślany kadr w połączeniu z delikatną obróbką
+                <br />w programie graficznym jest moim przepisem na dobre
+                zdjęcie.
               </p>
               <p class="about__content-info-text hide-small-medium">
-                Kilka suchych faktów o mnie: absolwent kursów krakowskiej Akademii
-                Fotografii, na koncie kilka indywidualnych wystaw fotograficznych,
-                członek Tarnowskiego Towarzystwa Fotograficznego.
+                Kilka faktów o mnie: absolwent kursów krakowskiej Akademii
+                Fotografii, warsztatów fotografii ślubnej i portretowej. Na
+                koncie mam kilka wystaw fotograficznych, między innymi w ramach
+                miesiąca fotografii w Krakowie. Posiadam uprawnienia do
+                fotografowania w kościołach i podczas nabożeństw.
+              </p>
+              <p class="about__content-info-text">
+                Działam głównie na terenie małopolski: Tarnów, Kraków i okolice,
+                ale nie jest to ograniczeniem - dojeżdżam do każdego zakątka
+                Polski.
               </p>
               <p class="about__content-info-text">
                 Zapraszam do zapoznania się z moim portfolio, ofertą, jak i do
@@ -131,7 +197,6 @@
                 Do zobaczenia!
               </p>
             </div>
-            
           </div>
         </div>
       </section>
@@ -177,12 +242,71 @@
           <p class="text-lead">
             Zapraszam do zapoznania się z zakresem usług, które oferuję.
           </p>
+          <div class="offer__description hide-desktop">
+            <p class="offer__description-item">
+              Dzień ślubu to z pewnością jeden z najważniejszych dni w życiu
+              Państwa Młodych.
+            </p>
+
+            <div class="offer__description--more">
+              <p class="offer__description-item">
+                Doceniam to, że fotografie ślubne, które wykonuję stają się
+                unikalną pamiątką dokumentującą szczęście i miłość dwojga ludzi
+                oraz ich rodzin i przyjaciół.
+              </p>
+              <p class="offer__description-item">
+                Utrwalenie tych chwil to wysoko postawiona poprzeczka, której z
+                pasją staram się sprostać. Działam tak, jakbym chciał, żeby
+                działał fotograf na moim własnym ślubie - to moja główna zasada.
+              </p>
+              <p class="offer__description-item">
+                W realizacji tego zadania pomaga mi wysokiej jakości sprzęt oraz
+                doświadczenie.
+              </p>
+              <p class="offer__description-item">
+                Stawiam na ponadczasowość, ale sprawnie łączę ją z zaproponowaną
+                przez Państwa Młodych stylistyką.
+              </p>
+              <p class="offer__description-item">
+                Ja wykonuję kompleksową usługę obejmującą reportaż ślubny,
+                plener i album, a Wy tworzycie piękne wspomnienia.
+              </p>
+            </div>
+
+            <div class="offer__description-arrow">
+              <div class="offer__description-arrow-item"></div>
+            </div>
+          </div>
+
+          <div class="offer__description hide-small-medium">
+            <p class="offer__description-item">
+              Dzień ślubu to z pewnością jeden z najważniejszych dni w życiu
+              Państwa Młodych. Doceniam to, że fotografie ślubne, które wykonuję
+              stają się unikalną pamiątką dokumentującą szczęście i miłość
+              dwojga ludzi oraz ich rodzin i przyjaciół. Utrwalenie tych chwil
+              to wysoko postawiona poprzeczka, której z pasją staram się
+              sprostać. Działam tak, jakbym chciał, żeby działał fotograf na
+              moim własnym ślubie - to moja główna zasada.
+            </p>
+            <div class="offer__description-item">
+              W realizacji tego zadania pomaga mi wysokiej jakości sprzęt oraz
+              doświadczenie. Stawiam na ponadczasowość, ale sprawnie łączę ją z
+              zaproponowaną przez Państwa Młodych stylistyką. Ja wykonuję
+              kompleksową usługę obejmującą reportaż ślubny, plener i album, a
+              Wy tworzycie piękne wspomnienia.
+            </div>
+          </div>
+
           <div class="offer__items">
             <div class="offer__item">
               <div class="card">
                 <div class="card__front">
                   <div class="card__front-content">
-                    <img class="card__front-content-icon" src="./images/icons/wedding.png" alt="Ikona przedstawiająca parę młodą">
+                    <img
+                      class="card__front-content-icon"
+                      src="./images/icons/wedding.png"
+                      alt="Ikona przedstawiająca parę młodą"
+                    />
                     <h3 class="card__front-content-text">
                       Fotografia ślubna
                     </h3>
@@ -190,7 +314,11 @@
                 </div>
 
                 <div class="card__back">
-                  <img class="card__back-image" src="./images/cards/card_wedding.JPG" alt="">
+                  <img
+                    class="card__back-image"
+                    src="./images/cards/card_wedding.jpg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -199,7 +327,11 @@
               <div class="card">
                 <div class="card__front">
                   <div class="card__front-content">
-                    <img class="card__front-content-icon" src="./images/icons/session.png" alt="Ikona przedstawiająca kobietę w kapeluszu">
+                    <img
+                      class="card__front-content-icon"
+                      src="./images/icons/session.png"
+                      alt="Ikona przedstawiająca kobietę w kapeluszu"
+                    />
                     <h3 class="card__front-content-text">
                       Sesje zdjęciowe
                     </h3>
@@ -207,7 +339,11 @@
                 </div>
 
                 <div class="card__back">
-                  <img class="card__back-image" src="./images/cards/card__session.jpg" alt="">
+                  <img
+                    class="card__back-image"
+                    src="./images/cards/card__session.jpg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -216,7 +352,11 @@
               <div class="card">
                 <div class="card__front">
                   <div class="card__front-content">
-                    <img class="card__front-content-icon" src="./images/icons/booth.png" alt="Ikona przedstawiająca fotobudkę">
+                    <img
+                      class="card__front-content-icon"
+                      src="./images/icons/booth.png"
+                      alt="Ikona przedstawiająca fotobudkę"
+                    />
                     <h3 class="card__front-content-text">
                       Fotobudka
                     </h3>
@@ -224,177 +364,345 @@
                 </div>
 
                 <div class="card__back">
-                  <img class="card__back-image" src="./images/cards/card_booth.JPG" alt="">
+                  <img
+                    class="card__back-image"
+                    src="./images/cards/card_booth.jpg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <a href="./oferta.html" class="offer__button">Szczegóły oraz cennik</a>
+          <a href="./oferta.html" class="offer__button"
+            >Szczegóły oraz cennik</a
+          >
         </div>
       </section>
 
       <section class="photoboothInfo" id="fotobudka">
         <div class="container">
           <h2 class="section-title">Fotobudka</h2>
-          <p class="text-lead">Organizujesz imprezę, urodziny, studniówkę, wesele, wieczór panieński lub kawalerski?</p>
+          <p class="text-lead">
+            Organizujesz imprezę, urodziny, studniówkę, wesele, wieczór
+            panieński lub kawalerski?
+          </p>
           <div class="photoboothInfo__content">
-            <h3 class="photoboothInfo__content-title">Chętnie Ci w tym pomogę</h3>
+            <h3 class="photoboothInfo__content-title">
+              Chętnie Ci w tym pomogę
+            </h3>
             <p class="photoboothInfo__content-info">
-              Podaruj swoim gościom atrakcję, dzięki której choć na chwilę będą mogli wrócić do lat, kiedy bezkarne były przebieranki i beztroskie swawole. Jeśli szukasz niecodziennego pomysłu, którym wszystkich zaskoczysz, a jednocześnie zafundujesz moc wrażeń, nie ma lepszej opcji niż oferowana przeze mnie fotobudka.
+              Podaruj swoim gościom atrakcję, dzięki której choć na chwilę będą
+              mogli wrócić do lat, kiedy bezkarne były przebieranki i beztroskie
+              swawole. Jeśli szukasz niecodziennego pomysłu, którym wszystkich
+              zaskoczysz, a jednocześnie zafundujesz moc wrażeń, nie ma lepszej
+              opcji niż oferowana przeze mnie fotobudka.
             </p>
-            <a href="./fotobudka.html" class="photoboothInfo__content-button">Więcej informacji</a>
+            <a href="./fotobudka.html" class="photoboothInfo__content-button"
+              >Więcej informacji</a
+            >
           </div>
         </div>
-
       </section>
 
       <section class="contact py-2" id="kontakt">
-          <h2 class="section-title">
-            Kontakt
-          </h2>
-          <p class="text-lead">
-            Zachęcam do kontaktu, na pewno znajdziemy wspólne rozwiązanie.
+        <h2 class="section-title">
+          Kontakt
+        </h2>
+        <p class="text-lead">
+          Zachęcam do kontaktu, na pewno znajdziemy wspólne rozwiązanie.
+        </p>
+        <form class="contact__form">
+          <div class="contact__form-fields">
+            <div class="contact__form-field contact__form-field--name">
+              <label for="name" class="contact__form-field-label"
+                >Imię i nazwisko</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="contact__form-field-input js-input"
+                required
+              />
+            </div>
+            <div class="contact__form-field contact__form-field--email">
+              <label for="email" class="contact__form-field-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="contact__form-field-input js-input"
+                required
+              />
+            </div>
+            <div class="contact__form-field contact__form-field--phone">
+              <label for="phone" class="contact__form-field-label"
+                >Telefon</label
+              >
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                class="contact__form-field-input js-input"
+                required
+              />
+            </div>
+            <div class="contact__form-field contact__form-field--subject">
+              <label for="subject" class="contact__form-field-label"
+                >Temat</label
+              >
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="contact__form-field-input js-input"
+                required
+              />
+            </div>
+            <div class="contact__form-field contact__form-field--message">
+              <label
+                for="message"
+                class="contact__form-field-label contact__form-field-label--message"
+                >Wiadomość</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact__form-field-input contact__form-field-input--message js-input"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit" class="contact__form-button">
+            Wyślij
+          </button>
+        </form>
+        <div class="contact__items">
+          <div class="contact__items-container">
+            <div class="contact__item">
+              <img src="./images/icons/phone.png" alt="Numer Telefonu" />
+              <a href="tel:792848517" class="contact__item-info">792 848 517</a>
+            </div>
+            <div class="contact__item">
+              <img src="./images/icons/envelope.png" alt="Adres Mailowy" />
+              <a href="mailto:foto@szymonmichon.pl" class="contact__item-info"
+                >foto@szymonmichon.pl</a
+              >
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-socials">
+                <div class="contact__item-social">
+                  <a
+                    href="https://www.facebook.com/szmfotografia"
+                    target="_blank"
+                  >
+                    <svg
+                      class="contact__item-social-icon contact__item-social-icon--fb"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="38"
+                      height="38"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="contact__item-social">
+                  <a
+                    href="https://www.instagram.com/szymon.michon/"
+                    target="_blank"
+                  >
+                    <svg
+                      class="contact__item-social-icon contact__item-social-icon--ig"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="38"
+                      height="38"
+                      viewBox="0 0 24 24"
+                    >
+                      <radialGradient
+                        id="ig-logo-gradient"
+                        r="150%"
+                        cx="30%"
+                        cy="107%"
+                      >
+                        <stop offset="0%" stop-color="#fdf497" />
+                        <stop offset="5%" stop-color="#fdf497" />
+                        <stop offset="45%" stop-color="#fd5949" />
+                        <stop offset="60%" stop-color="#d6249f" />
+                        s
+                        <stop offset="90%" stop-color="#285aeb" />
+                      </radialGradient>
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__address-info">
+          <div class="contact__address-info-container">
+            <div class="contact__address-info-item">
+              <img
+                class="contact__address-info-item-icon"
+                src="./images/icons/address.png"
+                alt="Dane adresowe"
+              />
+              <p class="contact__address-info-item-text">Szymon Michoń</p>
+              <p class="contact__address-info-item-text">
+                ul. Rogoyskiego 34/5
+              </p>
+              <p class="contact__address-info-item-text">NIP: 8733273672</p>
+              <p class="contact__address-info-item-text">REGON: 384658934</p>
+            </div>
+            <div
+              class="contact__address-info-item contact__address-info-item--map"
+              id="contactMap"
+            ></div>
+          </div>
+          <p class="contact__address-info-summary">
+            Działam na terenie województw: <br />
+            <strong class="contact__address-info-summary-strong"
+              >Małopolskiego, Świętokrzyskiego, Śląskiego,
+              Podkarpackiego</strong
+            >
           </p>
-          <form class="contact__form">
-            <div class="contact__form-fields">
-              <div class="contact__form-field contact__form-field--name">
-                <label for="name" class="contact__form-field-label"
-                  >Imię i nazwisko</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="contact__form-field-input js-input"
-                  required
-                />
-              </div>
-              <div class="contact__form-field contact__form-field--email">
-                <label for="email" class="contact__form-field-label">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="contact__form-field-input js-input"
-                  required
-                />
-              </div>
-              <div class="contact__form-field contact__form-field--phone">
-                <label for="phone" class="contact__form-field-label"
-                  >Telefon</label
-                >
-                <input
-                  type="number"
-                  name="phone"
-                  id="phone"
-                  class="contact__form-field-input js-input"
-                  required
-                />
-              </div>
-              <div class="contact__form-field contact__form-field--subject">
-                <label for="subject" class="contact__form-field-label"
-                  >Temat</label
-                >
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  class="contact__form-field-input js-input"
-                  required
-                />
-              </div>        
-              <div class="contact__form-field contact__form-field--message">
-                <label
-                  for="message"
-                  class="contact__form-field-label contact__form-field-label--message"
-                  >Wiadomość</label
-                >
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  class="contact__form-field-input contact__form-field-input--message js-input"
-                  required
-                ></textarea>
-              </div>
-            </div>
-            <button type="submit" class="contact__form-button">
-              Wyślij
-            </button>
-          </form>
-            <div class="contact__items my-2">
-              <div class="contact__items-container">            
-                <div class="contact__item">
-                  <img src="./images/icons/phone.png" alt="Numer Telefonu">
-                  <a href="tel:792848517" class="contact__item-info">792 848 517</a>
-                </div>
-                <div class="contact__item">
-                  <img src="./images/icons/envelope.png" alt="Adres Mailowy">
-                  <a href="mailto:foto@szymonmichon.pl" class="contact__item-info">foto@szymonmichon.pl</a>
-                </div>
-                <div class="contact__item">
-                  <div class="contact__item-socials">
-                    <div class="contact__item-social">
-                      <a href="https://www.facebook.com/szmfotografia" target="_blank">
-                        <svg class="contact__item-social-icon contact__item-social-icon--fb" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
-                          <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="contact__item-social">
-                      <a href="https://www.instagram.com/szymon.michon/" target="_blank">
-                        <svg class="contact__item-social-icon contact__item-social-icon--ig" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
-                          <radialGradient id="ig-logo-gradient" r="150%" cx="30%" cy="107%">
-                            <stop offset="0%" stop-color="#fdf497" />
-                            <stop offset="5%" stop-color="#fdf497" />
-                            <stop offset="45%" stop-color="#fd5949" />
-                            <stop offset="60%" stop-color="#d6249f" />s
-                            <stop offset="90%" stop-color="#285aeb" />
-                          </radialGradient>
-                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                      </a>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
       </section>
     </main>
+
+    <aside>
+      <div class="contact-popup" id="contactPopup">
+        <div class="contact-popup__header">
+          <h3 class="contact-popup__header-title">Cześć!</h3>
+          <span class="contact-popup__header-close" id="closeContactPopup"
+            >&times;</span
+          >
+        </div>
+        <div class="contact-popup__content">
+          <div class="contact-popup__desc">
+            <p class="contact-popup__desc-item">
+              Widzę, że jesteś tu od dłuższej chwili.
+            </p>
+            <p class="contact-popup__desc-item">
+              Podaj poniżej swój adres e-mail lub numer telefonu, a skontaktuję
+              się z Tobą i zaproponuję najlepszą ofertę!
+            </p>
+          </div>
+          <form class="contact-popup__form" id="contactPopupForm">
+            <div class="contact-popup__form-field">
+              <label for="email-popup" class="contact-popup__form-label"
+                >Adres e-mail</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email-popup"
+                class="contact-popup__form-input js-input"
+              />
+            </div>
+            <div class="contact-popup__form-field">
+              <label for="phone-popup" class="contact-popup__form-label"
+                >Numer telefonu</label
+              >
+              <input
+                type="number"
+                name="phone"
+                id="phone-popup"
+                class="contact-popup__form-input js-input"
+              />
+            </div>
+            <button type="submit" class="contact-popup__form-button">
+              Poproś o kontakt
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-popup-shortcut" id="contactIcon">
+        <img
+          src="./images/icons/contact.png"
+          alt="Ask for contact"
+          class="contact-popup-shortcut-icon"
+        />
+      </div>
+    </aside>
+
     <footer class="footer py-3">
       <div class="container">
         <div class="footer__content">
-          <a href="https://www.instagram.com/szymon.michon/" target="_blank" class="footer__content-ig-link">
-            <span class="footer__content-ig-link-text">Śledź mnie na instagramie</span>
+          <a
+            href="https://www.instagram.com/szymon.michon/"
+            target="_blank"
+            class="footer__content-ig-link"
+          >
+            <span class="footer__content-ig-link-text"
+              >Śledź mnie na instagramie</span
+            >
           </a>
           <div class="footer__content-items">
             <p class="footer__content-text">
               2019 Szymon Michoń &copy;
             </p>
             <div class="footer__content-socials">
-              <a  class="footer__content-social" href="https://www.facebook.com/szmfotografia" target="_blank">
-                <svg class="footer__content-social footer__content-social--fb" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              <a
+                class="footer__content-social"
+                href="https://www.facebook.com/szmfotografia"
+                target="_blank"
+              >
+                <svg
+                  class="footer__content-social footer__content-social--fb"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                  />
                 </svg>
               </a>
-              <a class="footer__content-social-ig" href="https://www.instagram.com/szymon.michon/" target="_blank">
-                  <svg class="footer__content-social footer__content-social--ig" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <radialGradient id="ig-logo-gradient" r="150%" cx="30%" cy="107%">
-                      <stop offset="0%" stop-color="#fdf497" />
-                      <stop offset="5%" stop-color="#fdf497" />
-                      <stop offset="45%" stop-color="#fd5949" />
-                      <stop offset="60%" stop-color="#d6249f" />
-                      <stop offset="90%" stop-color="#285aeb" />
-                    </radialGradient>
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
+              <a
+                class="footer__content-social-ig"
+                href="https://www.instagram.com/szymon.michon/"
+                target="_blank"
+              >
+                <svg
+                  class="footer__content-social footer__content-social--ig"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <radialGradient
+                    id="ig-logo-gradient"
+                    r="150%"
+                    cx="30%"
+                    cy="107%"
+                  >
+                    <stop offset="0%" stop-color="#fdf497" />
+                    <stop offset="5%" stop-color="#fdf497" />
+                    <stop offset="45%" stop-color="#fd5949" />
+                    <stop offset="60%" stop-color="#d6249f" />
+                    <stop offset="90%" stop-color="#285aeb" />
+                  </radialGradient>
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
               </a>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
-    </footer>    
+    </footer>
   </body>
 </html>
+
+// Klucz api AIzaSyBARCnssY3RwAwY-LnzsqThn77pJggsNWE

@@ -1,0 +1,169 @@
+.contact-popup {
+  position: fixed;
+  z-index: 20;
+  bottom: 3rem;
+  right: 2rem;
+  left: 2rem;
+  transform: translateX(500%);
+  font-size: 1.6rem;
+  transition: 0.3s;
+  height: auto;
+  border: 2px solid $main-color;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+
+  &.js-show {
+    transform: translateX(0);
+  }
+
+  &__alert {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+    padding: 3rem;
+    font-size: 3rem;
+    color: $light-color;
+    text-align: center;
+
+    &--wrong-data {
+      top: 0;
+      left: 0;
+      height: 30%;
+      background-color: red;
+    }
+
+    &--success {
+      background-color: #326632;
+    }
+
+    &--fail {
+      background-color: #da3434;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-color;
+    height: 80px;
+    overflow: hidden;
+    color: $light-color;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+
+    &-close {
+      cursor: pointer;
+      font-size: 4rem;
+      font-weight: bold;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  &__desc {
+    padding: 2rem 3rem;
+    background-color: $medium-color;
+    text-align: left;
+
+    &-item {
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__form {
+    padding: 2rem 3rem;
+    background-color: $dark-color;
+
+    &-field {
+      @include position(relative);
+      margin-bottom: 1rem;
+    }
+
+    &-label {
+      @include position(absolute, 1rem, null, null, 0.8rem);
+      color: $dark-color;
+      pointer-events: none;
+      transition: transform 0.5s, font-weight 0.5s, color 0.5s, font-size 0.5s;
+
+      &.js-focus {
+        transform: translateY(-50%);
+        font-weight: bold;
+        color: $main-color;
+        font-size: 1rem;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      height: 100%;
+      padding: 1.8rem 0.6rem 0.6rem;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      outline: none;
+      background-color: $main-color;
+      border: 1px solid $main-color;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover,
+      &:active {
+        background-color: $dark-color;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.contact-popup-shortcut {
+  cursor: pointer;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 25;
+  transform: translateX(300%);
+  border-radius: 50%;
+  border: 2px solid $main-color;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-color;
+  color: white;
+  width: 85px;
+  height: 85px;
+  transition: transform 0.5s ease-in-out;
+
+  &.js-show {
+    transform: translateX(0);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

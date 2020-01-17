@@ -10,18 +10,18 @@ function showAlert(msg, className) {
 
   setTimeout(() => {
     document.querySelector('.contact__alert').remove();
-  }, 8000);
+  }, 5000);
 }
 
 form.addEventListener('submit', e => {
   e.preventDefault();
 
   const data = {
-    name: e.target.name.value,
+    imie: e.target.name.value,
     email: e.target.email.value,
-    subject: e.target.subject.value,
-    phone: e.target.phone.value,
-    message: e.target.message.value
+    temat: e.target.subject.value,
+    telefon: e.target.phone.value,
+    wiadomosc: e.target.message.value
   };
 
   const url = 'https://formspree.io/xknonpkb';
@@ -37,9 +37,6 @@ form.addEventListener('submit', e => {
     .then(res => res.json())
     .then(resContent => {
       if ('error' in resContent) {
-        console.log(
-          'Prawdopodobnie źle wypełniłeś formularz, wypełnij go poprawnie i spróbuj jeszcze raz go wysłać.'
-        );
         form.reset();
         showAlert(
           'Niestety wiadomość nie została wysłana, proszę jeszcze raz wysłać poprawnie wypełniony formularz, jeżeli próba znowu się nie powiedzie proszę o kontakt poprzez niżej podane sposoby.',
