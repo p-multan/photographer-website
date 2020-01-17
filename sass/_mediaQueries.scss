@@ -36,8 +36,12 @@
   .about {
     &__content {
       &-photo {
-        width: 45vw;
-        height: 45vh;
+        width: 25vh;
+        height: 25vh;
+
+        &-image {
+          width: 100%;
+        }
       }
       &-info {
         width: 70vw;
@@ -261,8 +265,8 @@
   .about {
     &__content {
       &-photo {
-        width: 38vw;
-        height: 50vh;
+        width: 35vh;
+        height: 35vh;
       }
       &-info {
         &-text {
@@ -496,6 +500,10 @@
       margin: 0 auto;
       border: 2px dashed lighten($main-color, 30%);
 
+      &-link {
+        display: none;
+      }
+
       &-photo {
         height: 70vh;
         margin-bottom: 0;
@@ -506,6 +514,7 @@
         }
 
         &-link {
+          display: block;
           width: 70%;
         }
       }
